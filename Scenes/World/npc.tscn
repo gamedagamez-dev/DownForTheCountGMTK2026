@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://doywl67e42nyf"]
+
+[ext_resource type="Script" uid="uid://bvbyx8rgtg1h5" path="res://npc.gd" id="1_sqgn8"]
+
+[node name="npc" type="Node3D" unique_id=1576124861]
+script = ExtResource("1_sqgn8")
+tree_size = 3
+_name = "the count"
+question_1 = "1+1"
+Q1_answer_correct = "2"
+Q1_answer_wrong = "3"
+question_2 = "2+2"
+Q2_answer_correct = "4"
+Q2_answer_wrong = "3"
+question_3 = "3+3"
+Q3_answer_correct = "6"
+Q3_answer_wrong = "7"
+Conclusion = "AAAAAAAAAAAAAAAAAAAAAAAAA"
+Failure = "fuck you"
+
+[node name="Control" type="Control" parent="." unique_id=173574903]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dialogue" type="RichTextLabel" parent="Control" unique_id=1110557125]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 443.0
+offset_right = 827.0
+offset_bottom = 630.0
+
+[node name="answer_1" type="Button" parent="Control" unique_id=1713649577]
+layout_mode = 0
+offset_left = 839.0
+offset_top = 454.0
+offset_right = 1105.0
+offset_bottom = 492.0
+
+[node name="answer_2" type="Button" parent="Control" unique_id=1910079299]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 517.0
+offset_right = 1106.0
+offset_bottom = 555.0
+
+[connection signal="button_down" from="Control/answer_1" to="." method="_on_answer_1_button_down"]
+[connection signal="button_down" from="Control/answer_2" to="." method="_on_answer_2_button_down"]
