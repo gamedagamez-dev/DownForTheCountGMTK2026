@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbjut2hroshh3"
-valid=false
+path="res://.godot/imported/SteelBeam.blend-7531cf3ada5f14e30dbc42dd1f9ddcaa.scn"
 
 [deps]
 
 source_file="res://Art/LeoArt/SteelBeam.blend"
+dest_files=["res://.godot/imported/SteelBeam.blend-7531cf3ada5f14e30dbc42dd1f9ddcaa.scn"]
 
 [params]
 
