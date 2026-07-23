@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://c1opumhmuncbo"]
+
+[ext_resource type="FontFile" uid="uid://2efg83o3b1ht" path="res://Resources/fonts/SweetMagic.ttf" id="1_g18y6"]
+[ext_resource type="Script" uid="uid://cn3n5o8qcugnt" path="res://Scenes/UI/MainMenu/main_menu.gd" id="1_mjmdf"]
+
+[node name="MainMenu" type="Control" unique_id=766292307]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+script = ExtResource("1_mjmdf")
+
+[node name="StartButton" type="Button" parent="." unique_id=1274374061]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 324.0
+offset_top = 336.0
+offset_right = -389.99988
+offset_bottom = -234.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(219, 39)
+
+[node name="StartText" type="Label" parent="StartButton" unique_id=806573382]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_g18y6")
+theme_override_font_sizes/font_size = 54
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="." unique_id=1374125467]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 324.0
+offset_top = 467.0
+offset_right = -390.0
+offset_bottom = -103.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ExitButton" type="Label" parent="ExitButton" unique_id=528240512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_g18y6")
+theme_override_font_sizes/font_size = 54
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1050461384]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 167.0
+offset_right = 841.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 80
+text = "Down for the Count"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
