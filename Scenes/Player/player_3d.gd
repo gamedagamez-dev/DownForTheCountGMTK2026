@@ -67,14 +67,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("movement_jump"):
 		if is_on_floor():
 			velocity.y = jump_velocity
-		elif is_on_wall_only():
+		#elif is_on_wall_only():
 			# Get the surface normal of the wall you are touching
-			var wall_normal = get_last_slide_collision().get_normal()
+		#	var wall_normal = get_last_slide_collision().get_normal()
 			
 			# Jump up and push away from the wall
-			velocity.y = jump_velocity
-			velocity.x = wall_normal.x * wall_jump_force
-			velocity.z = wall_normal.z * wall_jump_force
+		#	velocity.y = jump_velocity
+		#	velocity.x = wall_normal.x * wall_jump_force
+		#	velocity.z = wall_normal.z * wall_jump_force
 
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var forward: Vector3 = global_transform.basis.z
