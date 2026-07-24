@@ -12,6 +12,7 @@ extends CharacterBody3D
 @export var friction: float = 90.0
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0
+var busy = false
 
 # Mouse look settings
 @export var mouse_sensitivity: float = 0.003
@@ -78,7 +79,7 @@ func _physics_process(delta: float) -> void:
 	if jump_buffer_timer > 0.0:
 		jump_buffer_timer -= delta
 	
-	if Input.is_action_just_pressed("movement_jump"):
+	if Input.is_action_just_pressed("movement_jump") and busy == false:
 		jump_buffer_timer = jump_buffer_time
 		if is_on_floor() or coyote_timer > 0.0:
 			velocity.y = jump_velocity
@@ -104,10 +105,10 @@ func _physics_process(delta: float) -> void:
 	var right: Vector3 = global_transform.basis.x
 	var direction := (forward * input_dir.y + right * input_dir.x).normalized()
 
-	if direction:
+	if direction and busy == false:
 		velocity.x = move_toward(velocity.x, direction.x * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
-	elif is_on_floor():
+	elif is_on_floor() and busy == false:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
 		velocity.z = move_toward(velocity.z, 0, friction * delta)
 	# else: airborne with no input -> keep current horizontal velocity (no deceleration)

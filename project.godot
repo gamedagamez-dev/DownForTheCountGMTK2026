@@ -30,6 +30,11 @@ window/stretch/aspect="expand"
 
 import/blender/enabled=false
 
+[global_group]
+
+npc=""
+interaction_check=""
+
 [gui]
 
 theme/custom_font="uid://2efg83o3b1ht"
@@ -65,6 +70,10 @@ movement_sprint={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
+}
+interaction={
+"deadzone": 0.2,
+"events": []
 }
 
 [physics]

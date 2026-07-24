@@ -10,6 +10,11 @@ emission_enabled = true
 emission = Color(0.6350183, 0.99999994, 0.9228195, 1)
 grow_amount = 1.022
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_200fj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_200fj"]
+size = Vector3(1, 2, 1)
+
 [node name="npc" type="Node3D" unique_id=1576124861]
 script = ExtResource("1_sqgn8")
 tree_size = 3
@@ -73,5 +78,18 @@ offset_bottom = 555.0
 mesh = SubResource("CapsuleMesh_0dqq6")
 surface_material_override/0 = SubResource("StandardMaterial3D_200fj")
 
+[node name="Area3D" type="Area3D" parent="." unique_id=158061127 groups=["npc"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1524533639]
+shape = SubResource("CylinderShape3D_200fj")
+debug_color = Color(0.3310067, 0.6233876, 3.85046e-07, 0.41960785)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1984668268]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=383898065]
+shape = SubResource("BoxShape3D_200fj")
+
 [connection signal="button_down" from="Control/answer_1" to="." method="_on_answer_1_button_down"]
 [connection signal="button_down" from="Control/answer_2" to="." method="_on_answer_2_button_down"]
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

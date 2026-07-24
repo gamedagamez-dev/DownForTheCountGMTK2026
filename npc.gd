@@ -44,18 +44,25 @@ func dialogue_start():
 	if tree_size == 0:
 		$Control/dialogue.text = Conclusion
 		outcome = 1
+		$Control/answer_1.text = "smooch em'"
+		$Control/answer_2.visible = false
+		await $Control/answer_1.button_down
+		is_talk = false
+		$Control.visible = false
 		return
 	if outcome == 1:
 		$Control/dialogue.text = Already_Succeceded
 		$Control/answer_1.text = "Leave"
 		$Control/answer_2.visible = false
 		await $Control/answer_1.button_down
+		is_talk = false
 		$Control.visible = false
 	elif outcome == 2:
 		$Control/dialogue.text = Already_Failed
 		$Control/answer_1.text = "Leave"
 		$Control/answer_2.visible = false
 		await $Control/answer_1.button_down
+		is_talk = false
 		$Control.visible = false
 	else:
 		$Control/dialogue.visible_characters = 0
@@ -83,6 +90,7 @@ func dialogue_start():
 				$Control/answer_1.text = "smooch em'"
 				$Control/answer_2.visible = false
 				await $Control/answer_1.button_down
+				is_talk = false
 				$Control.visible = false
 				return
 			else:
@@ -93,6 +101,7 @@ func dialogue_start():
 			$Control/answer_1.text = "Leave"
 			$Control/answer_2.visible = false
 			await $Control/answer_1.button_down
+			is_talk = false
 			$Control.visible = false
 
 func scroll():
@@ -110,3 +119,28 @@ func _on_answer_1_button_down() -> void:
 func _on_answer_2_button_down() -> void:
 	selected_answer = $Control/answer_2.text
 	emit_signal("selected")
+
+
+
+var can_talk = false
+var is_talk = false
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	if area.is_in_group("interaction_check"):
+		can_talk = true
+		while can_talk == true:
+			if Input.is_action_just_pressed("interaction"):
+				is_talk = true
+				area.get_parent().busy = true
+				dialogue_start()
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+				while is_talk == true:
+					await get_tree().create_timer(1.0/240).timeout
+				Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
+				is_talk = false
+				area.get_parent().busy = false
+			await get_tree().create_timer(1.0/240).timeout
+
+
+func _on_area_3d_area_exited(area: Area3D) -> void:
+	if area.is_in_group("interaction_check"):
+		can_talk = false
