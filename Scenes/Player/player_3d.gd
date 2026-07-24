@@ -6,6 +6,10 @@ extends CharacterBody3D
 @export var sprint_speed: float = 5.0
 @export var sprinting: bool = false
 @export var wall_jump_force = 6.0
+@export var coyote_time = 0.15
+@export var jump_buffer_time = 0.15
+var coyote_timer = 0.0
+var jump_buffer_timer = 0.0
 
 # Mouse look settings
 @export var mouse_sensitivity: float = 0.003
@@ -16,6 +20,8 @@ extends CharacterBody3D
 
 @onready var camera_pivot: Node3D = $Neck
 @onready var pause_menu: Control = get_node("PlayerUi/PauseMenu")
+@onready var forward_ray = $Forwardstep
+@onready var step_ray = $StepHeight
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -63,10 +69,19 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		coyote_timer -= delta
+	else: 
+		coyote_timer = coyote_time
 
+	if jump_buffer_timer > 0.0:
+		jump_buffer_timer -= delta
+	
 	if Input.is_action_just_pressed("movement_jump"):
-		if is_on_floor():
+		jump_buffer_timer = jump_buffer_time
+		if is_on_floor() or coyote_timer > 0.0:
 			velocity.y = jump_velocity
+			coyote_timer = 0.0
+			jump_buffer_timer = 0.0
 		#elif is_on_wall_only():
 			# Get the surface normal of the wall you are touching
 		#	var wall_normal = get_last_slide_collision().get_normal()
@@ -75,6 +90,12 @@ func _physics_process(delta: float) -> void:
 		#	velocity.y = jump_velocity
 		#	velocity.x = wall_normal.x * wall_jump_force
 		#	velocity.z = wall_normal.z * wall_jump_force
+
+	if is_on_floor() and jump_buffer_timer > 0:
+		velocity.y = jump_velocity
+		coyote_timer = 0.0
+		jump_buffer_timer = 0.0
+
 
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var forward: Vector3 = global_transform.basis.z
