@@ -19,10 +19,10 @@ metadata/_edit_vertical_guides_ = [576.0]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=347709982]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 4.0
-offset_right = 1151.0
-offset_bottom = 652.0
+offset_left = -492.0
+offset_top = -464.0
+offset_right = 1602.0
+offset_bottom = 958.0
 color = Color(0.17254902, 0.24705882, 0.21960784, 0.3254902)
 
 [node name="Label" type="Label" parent="." unique_id=1213288562]
