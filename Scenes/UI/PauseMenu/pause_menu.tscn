@@ -60,9 +60,10 @@ value = 50.0
 [node name="QuitContainer" type="Control" parent="." unique_id=2117172550]
 anchors_preset = 0
 offset_left = 556.0
-offset_top = 333.0
+offset_top = 300.0
 offset_right = 596.0
-offset_bottom = 373.0
+offset_bottom = 340.0
+mouse_filter = 1
 
 [node name="ExitButton" type="Button" parent="QuitContainer" unique_id=513520193]
 layout_mode = 0
@@ -77,6 +78,7 @@ offset_left = 556.0
 offset_top = 333.0
 offset_right = 596.0
 offset_bottom = 373.0
+mouse_filter = 1
 
 [node name="MainMenuButton" type="Button" parent="MainMenucontainer" unique_id=1830346266]
 layout_mode = 0
