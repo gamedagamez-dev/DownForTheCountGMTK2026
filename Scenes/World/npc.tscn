@@ -30,6 +30,16 @@ offset_left = 25.0
 offset_top = 443.0
 offset_right = 827.0
 offset_bottom = 630.0
+text = "aioajufjseoifujvu;fnmwogivsjcfnf ivsjvaAIORL;JFN48QOC]"
+
+[node name="name" type="RichTextLabel" parent="Control" unique_id=792023939]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 402.0
+offset_right = 696.0
+offset_bottom = 445.0
+text = "the count"
+horizontal_alignment = 1
 
 [node name="answer_1" type="Button" parent="Control" unique_id=1713649577]
 layout_mode = 0
