@@ -2,6 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7tdgh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ffiy"]
+albedo_color = Color(0.92156863, 0.11764706, 0.23529412, 1)
+metallic = 1.0
+metallic_specular = 1.0
+emission_enabled = true
+emission = Color(0.34532464, 0.5770674, 0.8350754, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_quq03"]
@@ -57,6 +66,33 @@ albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
 
 [node name="World3d" type="Node3D" unique_id=1464030692]
 
+[node name="PlaceholderVampires" type="Node" parent="." unique_id=1500927625]
+
+[node name="Vampire0" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=260970442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.70001, 6.7000003, 23.699999)
+mesh = SubResource("CapsuleMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
+[node name="Vampire1" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=404305770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.80001, 2.6000001, 18.199995)
+mesh = SubResource("CapsuleMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
+[node name="Vampire4" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=1894885355]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.200012, 29.4, -55.500004)
+mesh = SubResource("CapsuleMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
+[node name="Vampire3" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=817386019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.39999, 2.6000001, 66.5)
+mesh = SubResource("CapsuleMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
+[node name="Vampire2" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=2080739482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.59999, 2.6000001, -22.200006)
+mesh = SubResource("CapsuleMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
 [node name="roads" type="Node" parent="." unique_id=1724903052]
 
 [node name="road0" type="MeshInstance3D" parent="roads" unique_id=76629703]
@@ -73,7 +109,7 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="road4" type="MeshInstance3D" parent="roads" unique_id=1705540888]
-transform = Transform3D(-8.7828397e-07, 0, 62.86801, 0, 0.2, 0, -20.092796, 0, -2.7480478e-06, -86.4, 1.2, -1.5000023)
+transform = Transform3D(-8.7829295e-07, 0, 66.568, 0, 0.2, 0, -20.093, 0, -2.9097798e-06, -86.4, 1.2, -1.5000023)
 mesh = SubResource("BoxMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_quq03")
 
@@ -190,7 +226,7 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="road5" type="MeshInstance3D" parent="roads" unique_id=639673951]
-transform = Transform3D(-20.092796, 0, -5.4960956e-06, 0, 0.19999999, 0, 1.756568e-06, 0, -62.86801, -127.84999, 1.2, -1.5000023)
+transform = Transform3D(-20.093, 0, -1.037462e-05, 0, 0.2, 0, 3.0339588e-06, 0, -68.708, -128.15, 1.2, -3.7)
 mesh = SubResource("BoxMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_quq03")
 
@@ -451,7 +487,7 @@ mesh = SubResource("BoxMesh_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="CarReferenceSize11" type="MeshInstance3D" parent="cars" unique_id=588776947]
-transform = Transform3D(-1.3113416e-07, 1.4520518e-14, 7, 4.5298742e-07, 2.2, 4.9042436e-21, -3, 3.3219078e-07, -3.059797e-07, -62.499996, 2.4500003, -33.7)
+transform = Transform3D(-1.3113416e-07, 1.4520518e-14, 7, 4.5298742e-07, 2.2, 4.9042436e-21, -3, 3.3219078e-07, -3.059797e-07, -62.499996, 2.6700003, -33.7)
 mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cars/CarReferenceSize11" unique_id=1745192000]
@@ -460,7 +496,7 @@ mesh = SubResource("BoxMesh_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="CarReferenceSize12" type="MeshInstance3D" parent="cars" unique_id=307435326]
-transform = Transform3D(-0.7764572, 8.597731e-08, 6.7614803, 4.5298742e-07, 2.1999998, 9.252476e-21, -2.8977773, 3.2087164e-07, -1.8117334, -58.78118, 2.4500003, -37.746452)
+transform = Transform3D(-0.7764572, 8.597731e-08, 6.7614803, 4.5298742e-07, 2.1999998, 9.252476e-21, -2.8977773, 3.2087164e-07, -1.8117334, -58.78118, 2.6700003, -37.746452)
 mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cars/CarReferenceSize12" unique_id=963577689]
@@ -487,7 +523,7 @@ mesh = SubResource("BoxMesh_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="Player3d" parent="." unique_id=1261980593 instance=ExtResource("1_oywug")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1000001, -1.75)
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 8.3, 4, 28.950003)
 vampires_kissed = 9
 
 [node name="Sidewalks" type="Node" parent="." unique_id=332335357]
@@ -652,7 +688,7 @@ mesh = SubResource("BoxMesh_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="sidewalk16" type="MeshInstance3D" parent="Sidewalks" unique_id=1446413925]
-transform = Transform3D(-5, 6.643815e-08, -9.059748e-06, 7.5497894e-07, 0.44, -8.526515e-13, 7.54979e-07, -1.6284659e-14, -60, -33.048992, 1.3280087, -75.81699)
+transform = Transform3D(-6.61, 6.643815e-08, -9.059748e-06, 9.980822e-07, 0.44, -8.526515e-13, 9.980823e-07, -1.6284659e-14, -60, -32.219, 1.328, -75.817)
 mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sidewalks/sidewalk16" unique_id=106409508]
@@ -742,7 +778,7 @@ mesh = SubResource("BoxMesh_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="sidewalk17" type="MeshInstance3D" parent="Sidewalks" unique_id=1914585578]
-transform = Transform3D(-5, 6.643815e-08, -9.059748e-06, 7.5497894e-07, 0.44, -8.526515e-13, 7.54979e-07, -1.6284659e-14, -60, -33.049, 1.3280087, -135.81699)
+transform = Transform3D(-6.61, 6.643815e-08, -9.059748e-06, 9.980822e-07, 0.44, -8.526517e-13, 9.980823e-07, -1.6284659e-14, -60, -32.249, 1.3280087, -135.81699)
 mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sidewalks/sidewalk17" unique_id=441710465]
@@ -898,12 +934,66 @@ sky_mode = 1
 environment = SubResource("Environment_oywug")
 camera_attributes = SubResource("CameraAttributesPractical_noce4")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" unique_id=307202859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.3, 8.6, 20.5)
+[node name="TestCityLights" type="Node" parent="Lighting" unique_id=820877153]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=307202859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.600006, 8.6, 20.5)
 light_bake_mode = 1
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="Lighting" unique_id=73314388]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=677308730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.899994, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=334421737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7999935, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=545630007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29999352, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1063471657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7000065, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=926515361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9000063, 10.500001, 36.400005)
+light_bake_mode = 1
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=317273593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.600007, 10.500001, 39.200005)
+light_bake_mode = 1
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1257323473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9000072, 10.500001, 41.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1959751129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.100007, 10.500001, 39.700005)
+light_bake_mode = 1
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1923610499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.100006, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1672901850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.300007, 16.7, 57.500004)
+light_bake_mode = 1
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=821283584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.100006, 8.6, 20.5)
+light_bake_mode = 1
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=402652584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.3, 7.8, 14.299999)
+light_bake_mode = 1
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=73314388]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.3, 4.2000003, 20.5)
+light_bake_mode = 1
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=250859781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.3, 4.2000003, 36.6)
 light_bake_mode = 1
 
 [node name="Buildings" type="Node" parent="." unique_id=1771611290]
@@ -1321,6 +1411,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_oudrq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Building1/building6/StaticBody3D" unique_id=1451939609]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
+[node name="building14" type="MeshInstance3D" parent="Buildings/Building1" unique_id=814032480]
+transform = Transform3D(-1.1753992e-06, 2.8009717e-06, 28.082, -5.6215124e-13, 18.55, -4.240264e-06, -26.89, -5.1023297e-13, -1.2275033e-06, -74.078, 10.653001, 47.553997)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_oudrq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/Building1/building14" unique_id=1478284793]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Building1/building14/StaticBody3D" unique_id=1337803988]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
 [node name="building16" type="MeshInstance3D" parent="Buildings/Building1" unique_id=1192692166]
 transform = Transform3D(-5.3765007e-07, 2.8009717e-06, 28.082, -2.5713874e-13, 18.55, -4.240264e-06, -12.3, -5.1023297e-13, -1.2275033e-06, -99.352, 10.653, 40.190002)
 mesh = SubResource("BoxMesh_7tdgh")
@@ -1369,6 +1469,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_oudrq")
 [node name="StaticBody3D" type="StaticBody3D" parent="Buildings/Building1/building15" unique_id=1806114070]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Building1/building15/StaticBody3D" unique_id=587739329]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="building26" type="MeshInstance3D" parent="Buildings/Building1" unique_id=851954311]
+transform = Transform3D(-1.0844795e-06, 1.0584805e-06, 27.052, -5.186676e-13, 7.01, -4.084738e-06, -24.81, -1.9281583e-13, -1.1824804e-06, -99.7528, 17.313, 25.623999)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_oudrq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/Building1/building26" unique_id=1031710658]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/Building1/building26/StaticBody3D" unique_id=1290372414]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="building8" type="MeshInstance3D" parent="Buildings/Building1" unique_id=1124871255]
@@ -3032,3 +3142,13 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="Platforms" type="Node" parent="." unique_id=2049937572]
+
+[node name="platform0" type="MeshInstance3D" parent="Platforms" unique_id=526707140]
+transform = Transform3D(-1.3750505e-06, 1.5099577e-07, -31.702, 1.9242969e-13, 1, 4.786868e-06, 8.44, 1.8006074e-15, -5.1649113e-06, -45.930367, 27.702997, -57.87648)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_7tdgh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platforms/platform0" unique_id=899482105]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/platform0/StaticBody3D" unique_id=653503867]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
