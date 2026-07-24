@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # Movement settings
 @export var speed: float = 7.0
-@export var jump_velocity: float = 4.5
+@export var jump_velocity: float = 8
 @export var sprint_speed: float = 5.0
 @export var sprinting: bool = false
 
@@ -11,12 +11,16 @@ extends CharacterBody3D
 @export var min_pitch: float = -80.0 # Lowest look angle (degrees)
 @export var max_pitch: float = 80.0  # Highest look angle (degrees)
 
+@export var vampires_kissed: int = 0
+
 @onready var camera_pivot: Node3D = $Neck
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
 	# Hide the mouse cursor and lock it to the game window
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$PlayerUi.updateVampKissed(vampires_kissed)
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if the player moved the mouse
