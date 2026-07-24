@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://baipuylukxhc3"]
 
+[ext_resource type="PackedScene" uid="uid://doywl67e42nyf" path="res://Scenes/World/npc.tscn" id="1_noce4"]
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7tdgh"]
@@ -73,11 +74,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.70001, 6.7000003, 23.699
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire1" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=404305770]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.80001, 2.6000001, 18.199995)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
 [node name="Vampire6" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=98347681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.89379, 41.008812, 24.532799)
 mesh = SubResource("CapsuleMesh_7tdgh")
@@ -102,6 +98,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.59999, 2.6000001, -22.200006)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
+
+[node name="npc" parent="PlaceholderVampires" unique_id=1576124861 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.97869, 2.5479975, 17.333141)
 
 [node name="roads" type="Node" parent="." unique_id=1724903052]
 
