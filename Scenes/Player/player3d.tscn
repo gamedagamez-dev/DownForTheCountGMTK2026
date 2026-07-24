@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dc0oy2ji0chod"]
 
 [ext_resource type="Script" uid="uid://bxvsos0aogxd4" path="res://Scenes/Player/player_3d.gd" id="1_meivf"]
+[ext_resource type="Material" uid="uid://dfkhi0vautvql" path="res://Resources/cellshade.tres" id="2_1uwsh"]
 [ext_resource type="PackedScene" uid="uid://bhqqukjsrwm3i" path="res://Scenes/UI/PlayerUi/player_ui.tscn" id="2_vce6t"]
+[ext_resource type="Material" uid="uid://cedicqkipx0w4" path="res://Resources/outline.tres" id="3_x07ym"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk0t1"]
 
@@ -14,6 +16,8 @@ script = ExtResource("1_meivf")
 shape = SubResource("CapsuleShape3D_rk0t1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1350648104]
+material_override = ExtResource("2_1uwsh")
+material_overlay = ExtResource("3_x07ym")
 mesh = SubResource("CapsuleMesh_rk0t1")
 
 [node name="Neck" type="Node3D" parent="." unique_id=719903463]
