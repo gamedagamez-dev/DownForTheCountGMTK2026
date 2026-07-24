@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # Movement settings
 @export var speed: float = 7.0
-@export var jump_velocity: float = 8
+@export var jump_velocity: float = 6
 @export var sprint_speed: float = 5.0
 @export var sprinting: bool = false
 @export var wall_jump_force = 6.0
@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if Input.is_action_just_pressed("movement_jump") and is_on_floor():
+	if Input.is_action_just_pressed("movement_jump"):
 		if is_on_floor():
 			velocity.y = jump_velocity
 		elif is_on_wall_only():
