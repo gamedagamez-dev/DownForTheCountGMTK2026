@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bvbyx8rgtg1h5" path="res://npc.gd" id="1_sqgn8"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0dqq6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_200fj"]
+albedo_color = Color(1, 0, 1, 1)
+grow_amount = 1.022
+
 [node name="npc" type="Node3D" unique_id=1576124861]
 script = ExtResource("1_sqgn8")
 tree_size = 3
@@ -9,14 +15,19 @@ _name = "the count"
 question_1 = "1+1"
 Q1_answer_correct = "2"
 Q1_answer_wrong = "3"
+Q1_failure = "wrong, its 3"
 question_2 = "2+2"
 Q2_answer_correct = "4"
 Q2_answer_wrong = "3"
+Q2_failure = "wrong, its 4"
 question_3 = "3+3"
 Q3_answer_correct = "6"
 Q3_answer_wrong = "7"
-Conclusion = "AAAAAAAAAAAAAAAAAAAAAAAAA"
+Q3_failure = "wrong, its 6"
+Conclusion = "kiss me"
 Failure = "fuck you"
+Already_Failed = "dont talk to me, LOSER!!!!!"
+Already_Succeceded = "kiss me again"
 
 [node name="Control" type="Control" parent="." unique_id=173574903]
 layout_mode = 3
@@ -54,6 +65,10 @@ offset_left = 840.0
 offset_top = 517.0
 offset_right = 1106.0
 offset_bottom = 555.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=48438373]
+mesh = SubResource("CapsuleMesh_0dqq6")
+surface_material_override/0 = SubResource("StandardMaterial3D_200fj")
 
 [connection signal="button_down" from="Control/answer_1" to="." method="_on_answer_1_button_down"]
 [connection signal="button_down" from="Control/answer_2" to="." method="_on_answer_2_button_down"]
