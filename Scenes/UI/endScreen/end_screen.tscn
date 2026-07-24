@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dtqkcyi1b24f5"]
+
+[ext_resource type="Script" uid="uid://b7eyhjf4aix2y" path="res://Scenes/UI/endScreen/end_screen.gd" id="1_vlach"]
+[ext_resource type="Texture2D" uid="uid://cm5aygfxggest" path="res://Resources/2dart/lipgraphic.png" id="2_1dora"]
+
+[node name="EndScreen" type="Control" unique_id=798107738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vlach")
+metadata/_edit_vertical_guides_ = [567.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1204942366]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.54901963, 0.32941177, 0.47843137, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1853689875]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 138.0
+offset_right = 701.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 50
+text = "Game over!"
+horizontal_alignment = 1
+
+[node name="QuitContainer" type="Control" parent="ColorRect" unique_id=737130471]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 359.0
+offset_right = 596.0
+offset_bottom = 399.0
+
+[node name="ExitButton" type="Button" parent="ColorRect/QuitContainer" unique_id=910651536]
+layout_mode = 0
+offset_left = -31.0
+offset_right = 70.0
+offset_bottom = 26.0
+text = "Quit to desktop"
+
+[node name="RestartContainer" type="Control" parent="ColorRect" unique_id=1085174015]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 317.0
+offset_right = 596.0
+offset_bottom = 357.0
+
+[node name="RestartButton" type="Button" parent="ColorRect/RestartContainer" unique_id=2080630094]
+layout_mode = 0
+offset_left = -31.0
+offset_right = 70.0
+offset_bottom = 26.0
+text = "Restart game"
+
+[node name="MainMenucontainer" type="Control" parent="ColorRect" unique_id=1521130314]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 398.0
+offset_right = 596.0
+offset_bottom = 438.0
+
+[node name="MainMenuButton" type="Button" parent="ColorRect/MainMenucontainer" unique_id=1795818216]
+layout_mode = 0
+offset_left = -39.0
+offset_right = 74.0
+offset_bottom = 26.0
+text = "Quit to Main menu"
+
+[node name="Kisscontainer" type="Control" parent="ColorRect" unique_id=1224972862]
+anchors_preset = 0
+offset_left = 500.0
+offset_top = 206.0
+offset_right = 729.0
+offset_bottom = 290.0
+
+[node name="Kisslabel" type="Label" parent="ColorRect/Kisscontainer" unique_id=1746237930]
+layout_mode = 0
+offset_left = -33.0
+offset_top = 18.0
+offset_right = 209.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 37
+text = "Vampires kissed:"
+
+[node name="kisscounter" type="Label" parent="ColorRect/Kisscontainer" unique_id=1699527095]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 57.0
+offset_right = 218.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 33
+text = "0"
+
+[node name="Lipgraphic" type="Sprite2D" parent="ColorRect/Kisscontainer" unique_id=2138704169]
+texture_filter = 1
+position = Vector2(-88, 43.000004)
+scale = Vector2(0.18945313, 0.18945313)
+texture = ExtResource("2_1dora")
+
+[connection signal="pressed" from="ColorRect/QuitContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="ColorRect/RestartContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="ColorRect/MainMenucontainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

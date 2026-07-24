@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="DownForTheCount"
-run/main_scene="uid://baipuylukxhc3"
+run/main_scene="uid://c1opumhmuncbo"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cm5aygfxggest"
+
+[autoload]
+
+Global="*uid://cob1s3nwrp665"
 
 [display]
 

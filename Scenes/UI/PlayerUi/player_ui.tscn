@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d24a24av5ddrq" path="res://Scenes/UI/PlayerUi/player_ui.gd" id="1_dywed"]
 [ext_resource type="PackedScene" uid="uid://rjww0ho3ipa" path="res://Scenes/UI/PauseMenu/pause_menu.tscn" id="2_vsx7o"]
 [ext_resource type="Texture2D" uid="uid://cm5aygfxggest" path="res://Resources/2dart/lipgraphic.png" id="3_6m0m2"]
+[ext_resource type="Script" uid="uid://b2gf1xcxygr6t" path="res://Scenes/UI/PlayerUi/Timer.gd" id="4_l0dg2"]
 
 [node name="PlayerUi" type="Control" unique_id=425346966]
 layout_mode = 3
@@ -38,12 +39,27 @@ offset_bottom = 93.0
 theme_override_font_sizes/font_size = 33
 text = "0"
 
+[node name="Lipgraphic" type="Sprite2D" parent="Kisscontainer" unique_id=1434649962]
+texture_filter = 1
+position = Vector2(-88, 43.000004)
+scale = Vector2(0.18945313, 0.18945313)
+texture = ExtResource("3_6m0m2")
+
 [node name="PauseMenu" parent="." unique_id=1965381542 instance=ExtResource("2_vsx7o")]
 visible = false
 layout_mode = 1
 
-[node name="Lipgraphic" type="Sprite2D" parent="." unique_id=1434649962]
-texture_filter = 1
-position = Vector2(835, 43.000004)
-scale = Vector2(0.18945313, 0.18945313)
-texture = ExtResource("3_6m0m2")
+[node name="Timercontainer" type="Control" parent="." unique_id=1947821479]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="timerLabel" type="Label" parent="Timercontainer" unique_id=407129927]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 55
+text = "00:00"
+script = ExtResource("4_l0dg2")
+
+[connection signal="timer_finished" from="Timercontainer/timerLabel" to="." method="_on_timer_label_timer_finished"]

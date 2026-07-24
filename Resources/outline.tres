@@ -6,4 +6,4 @@
 render_priority = 0
 shader = ExtResource("1_b5lxn")
 shader_parameter/color = Color(1, 0.74509805, 0, 1)
-shader_parameter/size = 1.0999999977648
+shader_parameter/size = 1.08999999798832
