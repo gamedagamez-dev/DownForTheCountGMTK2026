@@ -1,9 +1,85 @@
 [gd_scene format=3 uid="uid://rjww0ho3ipa"]
 
-[node name="PauseMenu" type="Control" unique_id=1965381542]
+[ext_resource type="Script" uid="uid://cdllx320iv1m" path="res://Scenes/UI/PauseMenu/pause_menu.gd" id="1_wtndc"]
+
+[node name="Pause_Menu" type="Control" unique_id=1965381542]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wtndc")
+metadata/_edit_vertical_guides_ = [576.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=347709982]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 4.0
+offset_right = 1151.0
+offset_bottom = 652.0
+color = Color(0.17254902, 0.24705882, 0.21960784, 0.3254902)
+
+[node name="Label" type="Label" parent="." unique_id=1213288562]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 138.0
+offset_right = 701.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 50
+text = "Game Paused"
+horizontal_alignment = 1
+
+[node name="SensContainer" type="Control" parent="." unique_id=890457574]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 235.0
+offset_right = 596.0
+offset_bottom = 275.0
+
+[node name="Label2" type="Label" parent="SensContainer" unique_id=1526572653]
+layout_mode = 0
+offset_left = -33.0
+offset_right = 72.0
+offset_bottom = 18.0
+text = "Mouse sensitivity"
+
+[node name="HSlider" type="HSlider" parent="SensContainer" unique_id=1054272833]
+layout_mode = 0
+offset_left = -76.0
+offset_top = 18.0
+offset_right = 116.0
+offset_bottom = 34.0
+value = 50.0
+
+[node name="QuitContainer" type="Control" parent="." unique_id=2117172550]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 333.0
+offset_right = 596.0
+offset_bottom = 373.0
+
+[node name="ExitButton" type="Button" parent="QuitContainer" unique_id=513520193]
+layout_mode = 0
+offset_left = -31.0
+offset_right = 70.0
+offset_bottom = 26.0
+text = "Quit to desktop"
+
+[node name="MainMenucontainer" type="Control" parent="." unique_id=1512015207]
+anchors_preset = 0
+offset_left = 556.0
+offset_top = 333.0
+offset_right = 596.0
+offset_bottom = 373.0
+
+[node name="MainMenuButton" type="Button" parent="MainMenucontainer" unique_id=1830346266]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 40.0
+offset_right = 77.0
+offset_bottom = 66.0
+text = "Quit to Main menu"
+
+[connection signal="pressed" from="QuitContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MainMenucontainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

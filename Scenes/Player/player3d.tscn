@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc0oy2ji0chod"]
 
 [ext_resource type="Script" uid="uid://bxvsos0aogxd4" path="res://Scenes/Player/player_3d.gd" id="1_meivf"]
+[ext_resource type="PackedScene" uid="uid://bhqqukjsrwm3i" path="res://Scenes/UI/PlayerUi/player_ui.tscn" id="2_vce6t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk0t1"]
 
@@ -18,4 +19,7 @@ mesh = SubResource("CapsuleMesh_rk0t1")
 [node name="Neck" type="Node3D" parent="." unique_id=719903463]
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=429563946]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6836235, 0)
+transform = Transform3D(1, 0, 0, 0, 0.96965796, 0.24446556, 0, -0.24446556, 0.96965796, 0, 1.3987832, 3.5139008)
+fov = 80.0
+
+[node name="PlayerUi" parent="." unique_id=425346966 instance=ExtResource("2_vce6t")]
