@@ -5,7 +5,9 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_0dqq6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_200fj"]
-albedo_color = Color(1, 0, 1, 1)
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0.6350183, 0.99999994, 0.9228195, 1)
 grow_amount = 1.022
 
 [node name="npc" type="Node3D" unique_id=1576124861]
@@ -30,6 +32,7 @@ Already_Failed = "dont talk to me, LOSER!!!!!"
 Already_Succeceded = "kiss me again"
 
 [node name="Control" type="Control" parent="." unique_id=173574903]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

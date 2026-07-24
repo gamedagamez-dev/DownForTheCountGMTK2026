@@ -34,7 +34,6 @@ func _ready() -> void:
 	wrong_answer_list = [Q1_answer_wrong,Q2_answer_wrong,Q3_answer_wrong,"wal_past_index"]
 	question_list = [question_1,question_2,question_3,"ql_past_index"]
 	failure_list = [Q1_failure,Q2_failure,Q3_failure,"fl_past_index"]
-	dialogue_start()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_page_down"):
