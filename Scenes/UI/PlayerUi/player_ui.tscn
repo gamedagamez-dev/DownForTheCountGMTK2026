@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d24a24av5ddrq" path="res://Scenes/UI/PlayerUi/player_ui.gd" id="1_dywed"]
 [ext_resource type="PackedScene" uid="uid://rjww0ho3ipa" path="res://Scenes/UI/PauseMenu/pause_menu.tscn" id="2_vsx7o"]
+[ext_resource type="Texture2D" uid="uid://cm5aygfxggest" path="res://Resources/2dart/lipgraphic.png" id="3_6m0m2"]
 
 [node name="PlayerUi" type="Control" unique_id=425346966]
 layout_mode = 3
@@ -17,23 +18,32 @@ script = ExtResource("1_dywed")
 anchors_preset = 0
 offset_left = 923.0
 offset_right = 1152.0
-offset_bottom = 91.0
+offset_bottom = 84.0
 
 [node name="Kisslabel" type="Label" parent="Kisscontainer" unique_id=652309563]
 layout_mode = 0
-offset_right = 105.0
-offset_bottom = 18.0
-theme_override_font_sizes/font_size = 24
+offset_left = -33.0
+offset_top = 18.0
+offset_right = 209.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 37
 text = "Vampires kissed:"
 
 [node name="kisscounter" type="Label" parent="Kisscontainer" unique_id=397784086]
 layout_mode = 0
-offset_left = 163.0
-offset_right = 320.0
-offset_bottom = 26.0
-theme_override_font_sizes/font_size = 24
+offset_left = 61.0
+offset_top = 57.0
+offset_right = 218.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 33
 text = "0"
 
 [node name="PauseMenu" parent="." unique_id=1965381542 instance=ExtResource("2_vsx7o")]
 visible = false
 layout_mode = 1
+
+[node name="Lipgraphic" type="Sprite2D" parent="." unique_id=1434649962]
+texture_filter = 1
+position = Vector2(835, 43.000004)
+scale = Vector2(0.18945313, 0.18945313)
+texture = ExtResource("3_6m0m2")
