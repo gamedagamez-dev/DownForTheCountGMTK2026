@@ -1,0 +1,26 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dfkhi0vautvql"]
+
+[ext_resource type="Shader" uid="uid://bk6l6cjbbte2l" path="res://Resources/cellshade.gdshader" id="1_mnr7a"]
+
+[sub_resource type="Gradient" id="Gradient_mnr7a"]
+offsets = PackedFloat32Array(0, 0.9921875)
+colors = PackedColorArray(0.7874762, 0.14439422, 0.6252782, 1, 0.05229173, 0.22340846, 0.3065479, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1ddtc"]
+gradient = SubResource("Gradient_mnr7a")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mnr7a")
+shader_parameter/albedo = Color(0.76240367, 0.7624037, 0.7624035, 1)
+shader_parameter/texture_albedo = SubResource("GradientTexture1D_1ddtc")
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 0.0
+shader_parameter/roughness = 0.0
+shader_parameter/metallic_texture_channel = Vector4(0, 0, 0, 0)
+shader_parameter/specular = 0.0
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(0, 0, 0)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(0, 0, 0)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)

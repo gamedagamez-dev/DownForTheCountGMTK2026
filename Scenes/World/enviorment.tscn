@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b5uu20dlw6vxn"]
+
+[sub_resource type="Environment" id="Environment_uwg5x"]
+background_mode = 1
+background_color = Color(0.19638646, 0.04747869, 0.23999113, 1)
+background_energy_multiplier = 0.75
+ambient_light_source = 2
+ambient_light_color = Color(0.4327905, 0.19886231, 0.7638873, 1)
+ambient_light_energy = 0.18
+tonemap_mode = 3
+tonemap_exposure = 0.45
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.001
+volumetric_fog_albedo = Color(0.24806589, 0.49205834, 0.86873007, 1)
+volumetric_fog_emission = Color(0.25, 0.07775001, 0.055000007, 1)
+volumetric_fog_emission_energy = 42.8
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_aluo5"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 54.1
+dof_blur_far_transition = 162.56
+dof_blur_amount = 0.02
+
+[node name="Enviorment" type="Node3D" unique_id=1125358154]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=193394284]
+transform = Transform3D(0.77958274, 0.6262684, 0.0062434375, -0.48142236, 0.59284145, 0.6455784, 0.40060377, -0.5062875, 0.7636684, 0, 27.122967, 0)
+light_color = Color(1, 0.40727, 0.5396764, 1)
+shadow_enabled = true
+shadow_opacity = 0.55
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=661058867]
+environment = SubResource("Environment_uwg5x")
+camera_attributes = SubResource("CameraAttributesPractical_aluo5")
