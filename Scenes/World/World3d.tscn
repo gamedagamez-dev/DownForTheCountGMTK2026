@@ -467,6 +467,7 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="Player3d" parent="." unique_id=1261980593 instance=ExtResource("1_oywug")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1000001, -1.75)
+vampires_kissed = 9
 
 [node name="Sidewalks" type="Node" parent="." unique_id=332335357]
 

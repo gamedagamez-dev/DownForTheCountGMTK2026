@@ -23,6 +23,7 @@ func _ready() -> void:
 	# Hide the mouse cursor and lock it to the game window
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$PlayerUi.updateVampKissed(vampires_kissed)
+	Global.current_score = vampires_kissed
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -56,6 +57,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			pause_menu.visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		#toggle_pause()
+		
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -90,8 +93,3 @@ func _physics_process(delta: float) -> void:
 func toggle_pause():
 	var new_pause_state = !get_tree().paused
 	get_tree().paused = new_pause_state
-	
-	if new_pause_state:
-		pause_menu.visible = true
-	else:
-		pause_menu.visible = false

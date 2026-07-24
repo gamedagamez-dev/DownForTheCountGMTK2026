@@ -3,10 +3,15 @@
 [ext_resource type="Script" uid="uid://cdllx320iv1m" path="res://Scenes/UI/PauseMenu/pause_menu.gd" id="1_wtndc"]
 
 [node name="Pause_Menu" type="Control" unique_id=1965381542]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wtndc")

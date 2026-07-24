@@ -19,7 +19,7 @@ mesh = SubResource("CapsuleMesh_rk0t1")
 [node name="Neck" type="Node3D" parent="." unique_id=719903463]
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=429563946]
-transform = Transform3D(1, 0, 0, 0, 0.96965796, 0.24446556, 0, -0.24446556, 0.96965796, 0, 1.3987832, 3.5139008)
+transform = Transform3D(1, 0, 0, 0, 0.96965796, 0.24446556, 0, -0.24446556, 0.96965796, 0.76255393, 1.6066718, 3.5139008)
 fov = 80.0
 
 [node name="PlayerUi" parent="." unique_id=425346966 instance=ExtResource("2_vce6t")]
