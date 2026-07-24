@@ -8,6 +8,8 @@ extends CharacterBody3D
 @export var wall_jump_force = 6.0
 @export var coyote_time = 0.15
 @export var jump_buffer_time = 0.15
+@export var acceleration: float = 30.0
+@export var friction: float = 90.0
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0
 
@@ -103,11 +105,12 @@ func _physics_process(delta: float) -> void:
 	var direction := (forward * input_dir.y + right * input_dir.x).normalized()
 
 	if direction:
-		velocity.x = direction.x * (speed + (sprint_speed * int(sprinting)))
-		velocity.z = direction.z * (speed + (sprint_speed * int(sprinting)))
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		velocity.x = move_toward(velocity.x, direction.x * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
+		velocity.z = move_toward(velocity.z, direction.z * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
+	elif is_on_floor():
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+		velocity.z = move_toward(velocity.z, 0, friction * delta)
+	# else: airborne with no input -> keep current horizontal velocity (no deceleration)
 
 	move_and_slide()
 
