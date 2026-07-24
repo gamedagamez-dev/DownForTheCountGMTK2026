@@ -9,6 +9,8 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rk0t1"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqgn8"]
+
 [node name="Player3d" type="CharacterBody3D" unique_id=1261980593]
 floor_snap_length = 0.3
 script = ExtResource("1_meivf")
@@ -20,6 +22,7 @@ shape = SubResource("CapsuleShape3D_rk0t1")
 material_override = ExtResource("2_1uwsh")
 material_overlay = ExtResource("3_x07ym")
 mesh = SubResource("CapsuleMesh_rk0t1")
+surface_material_override/0 = SubResource("StandardMaterial3D_sqgn8")
 
 [node name="Neck" type="Node3D" parent="." unique_id=719903463]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
