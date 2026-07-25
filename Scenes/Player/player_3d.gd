@@ -59,14 +59,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		sprinting = false
 	
 	# Release the mouse cursor if the player presses UI Cancel (Escape key by default)
-	if Input.is_action_just_pressed("ui_cancel"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			pause_menu.visible = true
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			pause_menu.visible = false
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		toggle_pause()
 		
 
 func _physics_process(delta: float) -> void:
@@ -119,6 +111,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func toggle_pause():
-	#var new_pause_state = !get_tree().paused
-	#get_tree().paused = new_pause_state
 	get_tree().paused = !get_tree().paused
