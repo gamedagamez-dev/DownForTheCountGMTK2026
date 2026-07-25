@@ -57,8 +57,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		sprinting = true
 	if event.is_action_released("movement_sprint"):
 		sprinting = false
-	
-	# Release the mouse cursor if the player presses UI Cancel (Escape key by default)
 		
 
 func _physics_process(delta: float) -> void:
