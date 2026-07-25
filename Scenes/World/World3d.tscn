@@ -5616,17 +5616,26 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 [node name="Node3D" parent="." unique_id=107295564 instance=ExtResource("3_quq03")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.741385, 26.483883, 59.40299)
 
-[node name="support" parent="Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=1902769071]
+[node name="support" parent="Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=16168381]
 visible = false
 
 [node name="Node3D2" parent="." unique_id=1965256920 instance=ExtResource("3_quq03")]
 transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -60.2279, 52.967766, 26.57371)
 
-[node name="support" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=1902769071]
+[node name="antenna" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="edge" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="2" unique_id=1525483574]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="support" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=16168381]
 visible = false
 
 [node name="Node3D3" parent="." unique_id=2070489541 instance=ExtResource("3_quq03")]
-transform = Transform3D(0.09649073, 0, -0.8948125, 0, 0.9, 0, 0.8948125, 0, 0.09649073, -29.149717, 2.3480058, -16.812563)
+transform = Transform3D(0.09649073, 0, -0.8948125, 0, 0.9, 0, 0.8948125, 0, 0.09649073, 4.523878, 2.3480058, -20.752438)
 
 [editable path="Node3D"]
 [editable path="Node3D/billboard"]
