@@ -111,18 +111,18 @@ question_1 = " Hey! You there! What are you doing skulking around? I don't like 
 Q1_answer_correct = " Yes you do."
 Q1_answer_wrong = " Well I don't like you either!"
 Q1_failure = " That's what I thought! Get out of here! Scram!"
-question_2 = " Wha- Huh? Wait a second. Okay but like, it's not like I'm going to kiss you or anything."
-Q2_answer_correct = " Yes you are."
-Q2_answer_wrong = " Me? Kiss you? Ewww!"
+question_2 = " Wha- Huh? Wait a second. Pfft!! I don't like like you!"
+Q2_answer_correct = "Are you sure?"
+Q2_answer_wrong = "Me kiss you? Eww!"
 Q2_failure = " Aha! I knew it! I knew you were bad news. Scram!"
 question_3 = ""
 Q3_answer_correct = " "
 Q3_answer_wrong = " "
 Q3_failure = " "
-Conclusion = " I... Huh. Well I guess I can't argue with that..."
+Conclusion = " I... Huh. Well I guess I can't argue with that!"
 Failure = "Our hate is mutual!"
 Already_Failed = " I didn't like you first!"
-Already_Succeceded = " You're impossible to argue with..."
+Already_Succeceded = "You convinced me."
 
 [node name="CountDawn" parent="Vampires" unique_id=2070426107 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.254597, 29.16547, -56.161606)
