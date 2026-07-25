@@ -20,6 +20,8 @@ albedo_color = Color(0.43432283, 0.43432283, 0.43432283, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fm7lc"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="BoxMesh" id="BoxMesh_noce4"]
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_noce4"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
@@ -69,11 +71,6 @@ albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
 
 [node name="Vampires" type="Node" parent="." unique_id=1500927625]
 
-[node name="Vampire0" type="MeshInstance3D" parent="Vampires" unique_id=260970442]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.70001, 6.7000003, 23.699999)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
 [node name="Vampire6" type="MeshInstance3D" parent="Vampires" unique_id=98347681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.89379, 41.008812, 24.532799)
 mesh = SubResource("CapsuleMesh_7tdgh")
@@ -91,11 +88,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
 [node name="Vampire8" type="MeshInstance3D" parent="Vampires" unique_id=2025750034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.532112, 41.252033, -95.06734)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="Vampire3" type="MeshInstance3D" parent="Vampires" unique_id=817386019]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.39999, 2.6000001, 66.5)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
@@ -124,6 +116,48 @@ Conclusion = "You deserve a smoochin'!"
 Failure = "My wallet is hungry."
 Already_Failed = "I still need money."
 Already_Succeceded = "Because of you, I am rich in more than one way..."
+
+[node name="CountEnnence" parent="Vampires" unique_id=5000409 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.871895, 6.609564, 23.841318)
+tree_size = 1
+_name = "Count Ennence"
+question_1 = " Mmm, helloooo. Don't I look fabulous in this soft moonlight?"
+Q1_answer_correct = " You are literally the most gorgeous person I've ever seen in my life."
+Q1_answer_wrong = " Yeah, you look great."
+Q1_failure = " Urgh, what a downer. Great? That's it? My perfect complexion deserves far better than your shoddly compliments."
+question_2 = " "
+Q2_answer_correct = " "
+Q2_answer_wrong = " "
+Q2_failure = " "
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " Ooh, you really know how to flatter a guy. Here, take this in return for your delicious praise..."
+Failure = "This moon makes my skin glitter --with or without you."
+Already_Failed = " I swear my skin glitters!"
+Already_Succeceded = "You're glittering tonight too!"
+
+[node name="MissCount" parent="Vampires" unique_id=1110771075 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.937727, 2.5479975, 66.161285)
+tree_size = 2
+_name = "MissCount"
+question_1 = " Ugh... I wanted to get dinner with some cute stranger, but I can't figure out how much money I have!"
+Q1_answer_correct = " Does it matter? You don't need a meal to have a good time."
+Q1_answer_wrong = " Oh, here, you just add up all those, carry the 2..."
+Q1_failure = " Don't make me sick. I hate math. Leave me alone, you nerd."
+question_2 = " Oh, perfect! That way I don't have to count up all this cash. Are you free by any chance?"
+Q2_answer_correct = " I'm not doing anything else, so..."
+Q2_answer_wrong = " Yes! Give me 5 minutes to get ready."
+Q2_failure = " 5??? That's a NUMBER! Nevermind actually..."
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " Perfect! You're kinda cute, you know? I've got some ideas for what we can do..."
+Failure = "You're making my head spin..."
+Already_Failed = " Deep breaths, no need to count."
+Already_Succeceded = " I like your vibe!"
 
 [node name="CountTuTenn" parent="Vampires" unique_id=81334117 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.591051, 2.5479975, -19.706211)
@@ -625,7 +659,7 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="CarReferenceSize4" type="MeshInstance3D" parent="cars" unique_id=1073516560]
 transform = Transform3D(-1.3113416e-07, 1.4520518e-14, 7, 4.5298742e-07, 2.2, 4.9042436e-21, -3, 3.3219078e-07, -3.059797e-07, -15.800001, 2.4500003, -3.9500027)
-mesh = SubResource("BoxMesh_7tdgh")
+mesh = SubResource("BoxMesh_noce4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="cars/CarReferenceSize4" unique_id=553808654]
 
@@ -688,7 +722,6 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="Player3d" parent="." unique_id=1261980593 instance=ExtResource("1_oywug")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 8.3, 4, 28.950003)
-vampires_kissed = 9
 
 [node name="Sidewalks" type="Node" parent="." unique_id=332335357]
 
