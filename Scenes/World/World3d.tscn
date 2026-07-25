@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://doywl67e42nyf" path="res://Scenes/World/npc.tscn" id="1_noce4"]
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 [ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
+[ext_resource type="Texture2D" uid="uid://bnql3q5t0n4ma" path="res://Resources/2dart/BlobGuyBillboard.png" id="4_oudrq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
@@ -58,6 +59,12 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_665xo"]
 albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10vwu"]
+albedo_texture = ExtResource("4_oudrq")
+emission_enabled = true
+emission_energy_multiplier = 0.25
+emission_texture = ExtResource("4_oudrq")
 
 [node name="World3d" type="Node3D" unique_id=1464030692]
 
@@ -5698,13 +5705,20 @@ transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
 [node name="poster" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="2" unique_id=1525483574]
-transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 
 [node name="support" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=16168381]
 visible = false
 
 [node name="Node3D" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 51.969734, 54.19356, 20.267906)
+
+[node name="antenna" parent="Billboards/Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="0" unique_id=509826140]
+visible = false
+
+[node name="poster" parent="Billboards/Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="2" unique_id=1525483574]
+transform = Transform3D(100, 1.8189894e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.29088974, 0.018089294, -0.089035034)
+surface_material_override/0 = SubResource("StandardMaterial3D_10vwu")
 
 [node name="support" parent="Billboards/Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=16168381]
 visible = false
