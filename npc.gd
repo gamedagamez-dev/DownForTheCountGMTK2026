@@ -128,9 +128,11 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("interaction_check"):
 		can_talk = true
 		print("in")
+		$Sprite3D.visible = true
 		while can_talk == true:
 			print("in2")
 			if Input.is_action_just_pressed("interaction"):
+				$Sprite3D.visible = false
 				is_talk = true
 				area.get_parent().busy = true
 				dialogue_start()
@@ -139,6 +141,8 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 					await get_tree().create_timer(1.0/240).timeout
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 				is_talk = false
+				area.get_parent().vampires_kissed += 1
+				area.get_parent().get_child(3).updateVampKissed(area.get_parent().vampires_kissed)
 				area.get_parent().busy = false
 			await get_tree().create_timer(1.0/240).timeout
 
@@ -146,3 +150,4 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 func _on_area_3d_area_exited(area: Area3D) -> void:
 	if area.is_in_group("interaction_check"):
 		can_talk = false
+		$Sprite3D.visible = false
