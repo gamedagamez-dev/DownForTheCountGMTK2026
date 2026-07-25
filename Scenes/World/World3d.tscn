@@ -67,50 +67,104 @@ albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
 
 [node name="World3d" type="Node3D" unique_id=1464030692]
 
-[node name="PlaceholderVampires" type="Node" parent="." unique_id=1500927625]
+[node name="Vampires" type="Node" parent="." unique_id=1500927625]
 
-[node name="Vampire0" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=260970442]
+[node name="Vampire0" type="MeshInstance3D" parent="Vampires" unique_id=260970442]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110.70001, 6.7000003, 23.699999)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire6" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=98347681]
+[node name="Vampire6" type="MeshInstance3D" parent="Vampires" unique_id=98347681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.89379, 41.008812, 24.532799)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire5" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=828750476]
+[node name="Vampire5" type="MeshInstance3D" parent="Vampires" unique_id=828750476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.943207, 31.457558, 101.63742)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire4" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=1894885355]
+[node name="Vampire4" type="MeshInstance3D" parent="Vampires" unique_id=1894885355]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.100014, 29.4, -54.900005)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire8" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=2025750034]
+[node name="Vampire8" type="MeshInstance3D" parent="Vampires" unique_id=2025750034]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.532112, 41.252033, -95.06734)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire3" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=817386019]
+[node name="Vampire3" type="MeshInstance3D" parent="Vampires" unique_id=817386019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.39999, 2.6000001, 66.5)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire7" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=1366173075]
+[node name="Vampire7" type="MeshInstance3D" parent="Vampires" unique_id=1366173075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.13937, 54.91349, 86.650475)
 mesh = SubResource("CapsuleMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
 
-[node name="Vampire2" type="MeshInstance3D" parent="PlaceholderVampires" unique_id=2080739482]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.59999, 2.6000001, -22.200006)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="npc" parent="PlaceholderVampires" unique_id=1576124861 instance=ExtResource("1_noce4")]
+[node name="ViscountCoupeAwn" parent="Vampires" unique_id=1576124861 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.97869, 2.5479975, 17.333141)
+tree_size = 1
+_name = "Viscount Coupe Awn3"
+question_1 = "Heeeeya! Ya' got any cash?"
+Q1_answer_correct = "Yes (give him 20 cents)."
+Q1_answer_wrong = "No."
+Q1_failure = "Damm' it..."
+question_2 = "Oh my GOD thank you! I love ya'."
+Q2_answer_correct = " "
+Q2_answer_wrong = " "
+Q2_failure = " "
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = "You deserve a smoochin'!"
+Failure = "My wallet is hungry."
+Already_Failed = "I still need money."
+Already_Succeceded = "Because of you, I am rich in more than one way..."
+
+[node name="CountTuTenn" parent="Vampires" unique_id=81334117 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.591051, 2.5479975, -19.706211)
+tree_size = 2
+_name = "Count Tu'tenn"
+question_1 = "One, two, three, four, five, six, seven, eight, nine..."
+Q1_answer_correct = " Ten!"
+Q1_answer_wrong = "What are you counting there?"
+Q1_failure = " GAH! You made me lose count! Go away!"
+question_2 = " Heh heh! I like your style. You see, earlier today, I had three pens. I lost one, so I bought three more just in case. How many pens do I have now?"
+Q2_answer_correct = " Five?"
+Q2_answer_wrong = " I don't know"
+Q2_failure = " Oh, come on! That was an easy one..."
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " Correct! You really have a beautiful mind. Let me show you what Me plus You equals..."
+Failure = "I need to add..."
+Already_Failed = "Just need to math..."
+Already_Succeceded = " I think I've found \"x\"..."
+
+[node name="CountErkulChurr" parent="Vampires" unique_id=344404732 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.786716, 2.5479975, -133.70612)
+_name = "Count Erkul Churr"
+question_1 = "Yooooooo, what's uppppppp. How's it hanging? You ever notice how corporate holidays like this have gotten recently? Crazy, right?"
+Q1_answer_correct = "I know, I hate corporations, they suck."
+Q1_answer_wrong = "Yeah! I love corporations, they keep our county running!"
+Q1_failure = "Ugh. I thought you were cool... Nevermind."
+question_2 = "Wow, you're actually smart. That's hard to come by these days. Who did you say you were again?"
+Q2_answer_correct = "I like to think of myself as a rebel. Some kind of vigilante."
+Q2_answer_wrong = "Just a regular person, trying to get by."
+Q2_failure = "That's kinda lame, not gonna lie. See you around."
+question_3 = "HELL yes. That's what I'm talking about! I bet you listen to the Unfits too."
+Q3_answer_correct = "I prefer the Tram Team."
+Q3_answer_wrong = "Whoa... you just blew my mind. I could kiss you right now. In fact..."
+Q3_failure = "Hmmm... you don't sound like you really know them. You lying? I hate fakers."
+Conclusion = "Our smooches are more powerful on New Years."
+Failure = "Don't give me normie-cooties, haha, hah."
+Already_Failed = "I'm busy."
+Already_Succeceded = "The GMTK 2026 New Year's moon is especially... alluring."
 
 [node name="roads" type="Node" parent="." unique_id=1724903052]
 
@@ -2147,13 +2201,83 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="TempBuilding12" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1396325508]
-transform = Transform3D(10.186, 2.6909454e-05, 5.3679964e-06, -1.4856353e-06, 184.5, 1.71681e-06, -1.2446714e-06, -7.2103708e-06, 43.93, 60.485996, 45.658, -131.338)
+transform = Transform3D(10.186, 1.9005805e-05, 5.3679964e-06, -1.4856353e-06, 130.31, 1.71681e-06, -1.2446714e-06, -5.092593e-06, 43.93, 60.486, 69.575, -131.338)
 mesh = SubResource("BoxMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding12" unique_id=85400824]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding12/StaticBody3D" unique_id=1163913137]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding33" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=37871448]
+transform = Transform3D(1, 1.4585071e-06, 1.2219434e-06, -1.458507e-07, 10, 3.9080584e-07, -1.2219434e-07, -3.90806e-07, 10, 55.897133, 3.6270676, -135.22487)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding33" unique_id=1069596179]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding33/StaticBody3D" unique_id=95626509]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding39" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1480331459]
+transform = Transform3D(1, 1.4585071e-06, 2.421892e-06, -1.458507e-07, 10, 7.7457713e-07, -1.2219435e-07, -3.90806e-07, 19.82, 65.26834, 3.6270676, -131.22928)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding39" unique_id=1844727152]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding39/StaticBody3D" unique_id=1355045061]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding37" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1308779582]
+transform = Transform3D(-4.371139e-08, 0, 10, 0, 10, 0, -1, 0, -4.371139e-07, 60.908077, 3.6270676, -140.5444)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding37" unique_id=1780435489]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding37/StaticBody3D" unique_id=298178216]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding38" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1949635833]
+transform = Transform3D(-4.371139e-08, 0, 10, 0, 10, 0, -1, 0, -4.371139e-07, 60.908077, 3.6270676, -121.56635)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding38" unique_id=395832718]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding38/StaticBody3D" unique_id=1271344852]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding35" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1250006281]
+transform = Transform3D(1, 1.4585071e-06, 1.7938131e-06, -1.458507e-07, 10, 5.7370295e-07, -1.2219435e-07, -3.90806e-07, 14.68, 55.897133, 3.6270676, -147.32167)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding35" unique_id=1763540277]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding35/StaticBody3D" unique_id=1320448159]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding36" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=188921933]
+transform = Transform3D(1, 1.4585071e-06, 1.7938131e-06, -1.458507e-07, 10, 5.7370295e-07, -1.2219435e-07, -3.90806e-07, 14.68, 55.897133, 3.6270676, -112.07324)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding36" unique_id=1649109293]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding36/StaticBody3D" unique_id=797548554]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding34" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1469075259]
+transform = Transform3D(1, 1.4585071e-06, 1.2219434e-06, -1.458507e-07, 10, 3.9080584e-07, -1.2219434e-07, -3.90806e-07, 10, 55.897, 3.627, -121.701)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding34" unique_id=1359521038]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding34/StaticBody3D" unique_id=1943276566]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="TempBuilding13" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=351672653]
