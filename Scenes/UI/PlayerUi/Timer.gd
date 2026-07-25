@@ -4,13 +4,12 @@ signal timer_finished
 
 @export var start_time_seconds: float = 120
 var time_left: float = 0.0
-var is_running: bool = true
 
 func _ready() -> void:
     time_left = start_time_seconds
 
 func _process(delta: float) -> void:
-    if not is_running:
+    if not Global.timer_running:
         return
         
     if time_left > 0:
@@ -19,7 +18,7 @@ func _process(delta: float) -> void:
             time_left = 0
         text = format_time(time_left)
     else:
-        is_running = false
+        Global.timer_running = false
         emit_signal("timer_finished")
         on_timeout()
 

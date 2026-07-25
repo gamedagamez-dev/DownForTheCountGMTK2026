@@ -137,7 +137,9 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 				dialogue_start()
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				while is_talk == true:
+					Global.timer_running = false
 					await get_tree().create_timer(1.0/240).timeout
+				Global.timer_running = true
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 				is_talk = false
 				if outcome == 1 and not already_smooched:
