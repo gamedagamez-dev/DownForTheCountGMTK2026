@@ -142,7 +142,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 				is_talk = false
 				area.get_parent().vampires_kissed += 1
-				area.get_parent().get_child(3).updateVampKissed(area.get_parent().vampires_kissed)
+				area.get_parent().get_node("PlayerUi").updateVampKissed(area.get_parent().vampires_kissed)
 				area.get_parent().busy = false
 			await get_tree().create_timer(1.0/240).timeout
 

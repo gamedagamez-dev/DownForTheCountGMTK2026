@@ -99,8 +99,8 @@ func _physics_process(delta: float) -> void:
 	var direction := (forward * input_dir.y + right * input_dir.x).normalized()
 
 	if direction and busy == false:
-		velocity.x = move_toward(velocity.x, direction.x * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
-		velocity.z = move_toward(velocity.z, direction.z * (speed + (sprint_speed * int(sprinting))), acceleration * delta)
+		velocity.x = move_toward(velocity.x, direction.x * (speed + Global.current_score + (sprint_speed * int(sprinting))), acceleration * delta)
+		velocity.z = move_toward(velocity.z, direction.z * (speed + Global.current_score + (sprint_speed * int(sprinting))), acceleration * delta)
 	elif is_on_floor() and busy == false:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
 		velocity.z = move_toward(velocity.z, 0, friction * delta)
