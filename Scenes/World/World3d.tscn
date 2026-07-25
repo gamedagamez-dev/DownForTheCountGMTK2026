@@ -4,15 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 [ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7tdgh"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ffiy"]
-albedo_color = Color(0.92156863, 0.11764706, 0.23529412, 1)
-metallic = 1.0
-metallic_specular = 1.0
-emission_enabled = true
-emission = Color(0.34532464, 0.5770674, 0.8350754, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_quq03"]
@@ -72,31 +63,6 @@ albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
 
 [node name="Vampires" type="Node" parent="." unique_id=1500927625]
 
-[node name="Vampire6" type="MeshInstance3D" parent="Vampires" unique_id=98347681]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.89379, 41.008812, 24.532799)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="Vampire5" type="MeshInstance3D" parent="Vampires" unique_id=828750476]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.943207, 31.457558, 101.63742)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="Vampire4" type="MeshInstance3D" parent="Vampires" unique_id=1894885355]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.100014, 29.4, -54.900005)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="Vampire8" type="MeshInstance3D" parent="Vampires" unique_id=2025750034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.532112, 41.252033, -95.06734)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
-[node name="Vampire7" type="MeshInstance3D" parent="Vampires" unique_id=1366173075]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.13937, 54.91349, 86.650475)
-mesh = SubResource("CapsuleMesh_7tdgh")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ffiy")
-
 [node name="ViscountCoupeAwn" parent="Vampires" unique_id=1576124861 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.97869, 2.5479975, 17.333141)
 tree_size = 1
@@ -117,6 +83,89 @@ Conclusion = "You deserve a smoochin'!"
 Failure = "My wallet is hungry."
 Already_Failed = "I still need money."
 Already_Succeceded = "Because of you, I am rich in more than one way..."
+
+[node name="CountUrract" parent="Vampires" unique_id=584522303 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.69177, 40.77004, 25.692501)
+tree_size = 2
+_name = " Count Ur'ract"
+question_1 = " Hey! You there! What are you doing skulking around? I don't like you..."
+Q1_answer_correct = " Yes you do."
+Q1_answer_wrong = " Well I don't like you either!"
+Q1_failure = " That's what I thought! Get out of here! Scram!"
+question_2 = " Wha- Huh? Wait a second. Okay but like, it's not like I'm going to kiss you or anything."
+Q2_answer_correct = " Yes you are."
+Q2_answer_wrong = " Me? Kiss you? Ewww!"
+Q2_failure = " Aha! I knew it! I knew you were bad news. Scram!"
+question_3 = ""
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " I... Huh. Well I guess I can't argue with that..."
+Failure = "Our hate is mutual!"
+Already_Failed = " I didn't like you first!"
+Already_Succeceded = " You're impossible to argue with..."
+
+[node name="CountDawn" parent="Vampires" unique_id=2070426107 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.254597, 29.16547, -56.161606)
+tree_size = 1
+_name = " Count Dawn"
+question_1 = "  I- Oh wow... I can't believe I'm being tormented like this, seeing someone as wondrous as you on a night as dreary as this..."
+Q1_answer_correct = "  I'm having a rough night too... maybe we can help each other?"
+Q1_answer_wrong = " Oh. I'm sorry."
+Q1_failure = "  Please, leave me to my misery..."
+question_2 = " "
+Q2_answer_correct = "  "
+Q2_answer_wrong = " "
+Q2_failure = "  "
+question_3 = ""
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " You, you would do that? For me? You really are wonderful..."
+Failure = " I must live on in misery..."
+Already_Failed = " The night actually isn't so bad."
+Already_Succeceded = " You're nice!"
+
+[node name="HeadCount" parent="Vampires" unique_id=558461443 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0791, 41.298637, -93.066826)
+_name = "Head Count"
+question_1 = "  Oh well hello there dear. I called all my children here for a family reunion, but now they've all scattered around and I can't find them all! Have you seen any of them?"
+Q1_answer_correct = "   Yeah! They're all around here somewhere."
+Q1_answer_wrong = "  Uhhhh... sorry no, I don't know what you're talking about."
+Q1_failure = " Agh... Such a shame."
+question_2 = " Oh, I'm so glad! I worry, you see. It's tiring having to keep track of where they all are."
+Q2_answer_correct = "  Well I can make it easy for you to keep track of me."
+Q2_answer_wrong = " Well, good luck with that!"
+Q2_failure = "  Um. Thank you? I suppose. Goodbye."
+question_3 = "Quite the charmer, aren't you? I'm sorry, I'm just very distracted and stressed right now. I hope all my children are alright."
+Q3_answer_correct = " Don't worry, I'm great with kids."
+Q3_answer_wrong = " Oh, sorry, I'll leave you alone then."
+Q3_failure = " Ah. Okay, see you dear."
+Conclusion = "  Oh! You know just what to say, haha! Oh, alright dear, you seem nice enough..."
+Failure = "  Have a nice day."
+Already_Failed = " G'day."
+Already_Succeceded = " Have a very good night, and a better year!"
+
+[node name="CountReeseIde" parent="Vampires" unique_id=177818562 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.600975, 32.834427, 101.10231)
+tree_size = 2
+_name = "Count Reese Ide"
+question_1 = " Well hey there, beautiful. What's a sweet thing like you doing out here on your own?"
+Q1_answer_correct = " Just chugging beers and driving my truck."
+Q1_answer_wrong = " Looking for you."
+Q1_failure = " Mmm, well that's sweet, but you can keep lookin', hun."
+question_2 = " After my own heart, aren't'cha? Whatcha doin' after this, sweetheart?"
+Q2_answer_correct = "More beer."
+Q2_answer_wrong = "Something together, hopefully."
+Q2_failure = "Hm. Cute, but naw thanks."
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = " Hah! Got room for one more? C'mere, precious..."
+Failure = " Just keep lookin' hun."
+Already_Failed = " Keep lookin' hun."
+Already_Succeceded = " Happy New Years, hun."
 
 [node name="CountEnnence" parent="Vampires" unique_id=5000409 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109.871895, 6.609564, 23.841318)
@@ -159,6 +208,27 @@ Conclusion = " Perfect! You're kinda cute, you know? I've got some ideas for wha
 Failure = "You're making my head spin..."
 Already_Failed = " Deep breaths, no need to count."
 Already_Succeceded = " I like your vibe!"
+
+[node name="Fredd" parent="Vampires" unique_id=3586007 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.028137, 54.840107, 87.92547)
+tree_size = 2
+_name = " Fredd"
+question_1 = " Hey there. Nothing to see here. Move along."
+Q1_answer_correct = " Hello, Normal Vampire."
+Q1_answer_wrong = "  Hey, you're not a vampire!"
+Q1_failure = "  YOU CAN'T PROVE ANYTHING!"
+question_2 = "  Er... yes. Hello. Um... move along please?"
+Q2_answer_correct = " You should kiss me. That's what a real vampire would do."
+Q2_answer_wrong = "  Why are you acting so suspicious?"
+Q2_failure = "  I don't know what you're talking about! Now, if you'll excuse me, I have, uh... important vampire business."
+question_3 = " "
+Q3_answer_correct = " "
+Q3_answer_wrong = " "
+Q3_failure = " "
+Conclusion = "  Oh, of course! I knew that. Because I am a real vampire. Yes..."
+Failure = " I'm a vampire!"
+Already_Failed = "  I swear I'm a vampire!"
+Already_Succeceded = " Very real vampire, yes!"
 
 [node name="CountTuTenn" parent="Vampires" unique_id=81334117 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.591051, 2.5479975, -19.706211)
@@ -5613,31 +5683,33 @@ mesh = SubResource("BoxMesh_7tdgh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/ramp/StaticBody3D" unique_id=2128170822]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
-[node name="Node3D" parent="." unique_id=107295564 instance=ExtResource("3_quq03")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.741385, 26.483883, 59.40299)
+[node name="Billboards" type="Node" parent="." unique_id=1880781328]
 
-[node name="support" parent="Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=16168381]
-visible = false
-
-[node name="Node3D2" parent="." unique_id=1965256920 instance=ExtResource("3_quq03")]
-transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -60.2279, 52.967766, 26.57371)
-
-[node name="antenna" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="0" unique_id=509826140]
-transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
-
-[node name="edge" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="1" unique_id=1434340184]
-transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
-
-[node name="poster" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="2" unique_id=1525483574]
-transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
-
-[node name="support" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=16168381]
-visible = false
-
-[node name="Node3D3" parent="." unique_id=2070489541 instance=ExtResource("3_quq03")]
+[node name="Node3D3" parent="Billboards" unique_id=2070489541 instance=ExtResource("3_quq03")]
 transform = Transform3D(0.09649073, 0, -0.8948125, 0, 0.9, 0, 0.8948125, 0, 0.09649073, 4.523878, 2.3480058, -20.752438)
 
-[editable path="Node3D"]
-[editable path="Node3D/billboard"]
-[editable path="Node3D2"]
-[editable path="Node3D2/billboard"]
+[node name="Node3D2" parent="Billboards" unique_id=1965256920 instance=ExtResource("3_quq03")]
+transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -60.2279, 52.967766, 26.57371)
+
+[node name="antenna" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="edge" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="2" unique_id=1525483574]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="support" parent="Billboards/Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=16168381]
+visible = false
+
+[node name="Node3D" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 51.969734, 54.19356, 20.267906)
+
+[node name="support" parent="Billboards/Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=16168381]
+visible = false
+
+[editable path="Billboards/Node3D2"]
+[editable path="Billboards/Node3D2/billboard"]
+[editable path="Billboards/Node3D"]
+[editable path="Billboards/Node3D/billboard"]
