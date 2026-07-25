@@ -14,4 +14,5 @@ func _on_main_menu_button_pressed() -> void:
 	get_tree(). change_scene_to_file("res://Scenes/UI/MainMenu/MainMenu.tscn")
 
 func _on_restart_button_pressed() -> void:
+	Global.timer_running = true
 	get_tree(). change_scene_to_file("res://Scenes/World/World3d.tscn")

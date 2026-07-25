@@ -6,6 +6,7 @@ func _ready() -> void:
 
 #Pressing start loads World3D
 func _on_start_button_pressed() -> void:
+	Global.timer_running = true
 	get_tree(). change_scene_to_file("res://Scenes/World/World3d.tscn")
 
 
