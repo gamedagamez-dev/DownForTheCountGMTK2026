@@ -145,6 +145,26 @@ Failure = " I must live on in misery..."
 Already_Failed = " The night actually isn't so bad."
 Already_Succeceded = " You're nice!"
 
+[node name="Edward" parent="Vampires" unique_id=462406328 instance=ExtResource("1_noce4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.762115, 2.2206826, -99.06751)
+_name = "Edward"
+question_1 = "I've been perfecting my new lipstick recipe, want to try some?"
+Q1_answer_correct = "What's special about it?"
+Q1_answer_wrong = "How does it taste?"
+Q1_failure = "Eww... probably like chemicals?"
+question_2 = " Oh, it's super cool. Each stick is made from two apples!"
+Q2_answer_correct = "What an inspiring business!"
+Q2_answer_wrong = " I bet it tastes good."
+Q2_failure = "What? No, there's also lot's of chemicals in it."
+question_3 = "Thank you! Would you like to try some?"
+Q3_answer_correct = "Why don't you help me put it on..."
+Q3_answer_wrong = " Sounds tasty!"
+Q3_failure = "What? No, I bet it tastes gross and toxic!"
+Conclusion = "Well, I guess I need to test all the use cases..."
+Failure = "Uhh, be please don't eat my product."
+Already_Failed = "If you're hungry why don't buy food?"
+Already_Succeceded = "Look out for my lipstick, rizzler."
+
 [node name="HeadCount" parent="Vampires" unique_id=558461443 instance=ExtResource("1_noce4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.0791, 41.298637, -93.066826)
 _name = "Head Count"
@@ -2450,7 +2470,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="TempBuilding18" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=776728919]
-transform = Transform3D(7.824503e-06, 5.605993e-12, -47.41, -6.0679176e-06, 180, 8.270384e-14, 40.186, 2.7179245e-05, 9.231067e-06, -86.909, 95.701, -92.963)
+transform = Transform3D(7.824503e-06, 5.605993e-12, -47.41, -6.0679176e-06, 180, 8.270384e-14, 40.186, 2.7179245e-05, 9.231067e-06, -86.909, 95.701, -93.923)
 mesh = SubResource("BoxMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 
@@ -2470,13 +2490,33 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="TempBuilding31" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1117171846]
-transform = Transform3D(3.8941434e-06, 6.2288813e-13, -47.13, -3.019916e-06, 20, 8.22153e-14, 20, 3.019916e-06, 9.17655e-06, -86.90899, 2.7508886, -106.74555)
+transform = Transform3D(3.8941434e-06, 6.228882e-13, -26.76, -3.019916e-06, 20, 4.6681263e-14, 20, 3.019916e-06, 5.210364e-06, -76.689, 2.751, -106.746)
 mesh = SubResource("BoxMesh_7tdgh")
 surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding31" unique_id=1491592023]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding31/StaticBody3D" unique_id=1543827871]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding41" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=738479753]
+transform = Transform3D(1.5245572e-06, 6.2288824e-13, -26.76, -1.1822971e-06, 20, 4.668133e-14, 7.83, 3.019916e-06, 5.210364e-06, -87.12823, 2.7509997, -105.53393)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding41" unique_id=1349422235]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding41/StaticBody3D" unique_id=1910636312]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="TempBuilding40" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1998597331]
+transform = Transform3D(3.8941434e-06, 6.2288824e-13, -15.67, -3.019916e-06, 20, 2.7335442e-14, 20, 3.019916e-06, 3.0510616e-06, -102.704, 2.751, -106.746)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_3jgpa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/TemporaryBuildings/TempBuilding40" unique_id=898063358]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/TemporaryBuildings/TempBuilding40/StaticBody3D" unique_id=1408646491]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="TempBuilding32" type="MeshInstance3D" parent="Buildings/TemporaryBuildings" unique_id=1298325851]
