@@ -80,6 +80,8 @@ func dialogue_start():
 			$Control/answer_2.text = correct_answer_list[progress]
 			$Control/answer_1.text = wrong_answer_list[progress]
 		scrolling = true
+		$Control/answer_1.disabled = true
+		$Control/answer_2.disabled = true
 		scroll()
 		await selected
 		scrolling = false
@@ -108,9 +110,16 @@ func dialogue_start():
 func scroll():
 	while scrolling == true:
 		$Control/dialogue.visible_characters += 1
-		if Input.is_action_just_pressed("ui_accept"):
+		if $Control/dialogue.visible_characters >= $Control/dialogue.text.length():
+			scrolling = false
+			break
+		if Input.is_action_just_pressed("skipDialogue"):
 			$Control/dialogue.visible_characters = -1
+			scrolling = false
+			break
 		await get_tree().create_timer(1.0/15).timeout
+	$Control/answer_1.disabled = false
+	$Control/answer_2.disabled = false
 
 func _on_answer_1_button_down() -> void:
 	selected_answer = $Control/answer_1.text
@@ -155,3 +164,13 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 	if area.is_in_group("interaction_check"):
 		can_talk = false
 		$Sprite3D.visible = false
+
+
+func _on_selected() -> void:
+	if not tree_size == 0:
+		$Control/dialogue.visible_characters = 0
+		scrolling = true
+	else:
+		$Control/dialogue.visible_characters = -1
+		scrolling = false
+		$Control/dialogue.text = Conclusion

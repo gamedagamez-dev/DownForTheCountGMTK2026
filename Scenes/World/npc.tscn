@@ -97,6 +97,7 @@ pixel_size = 0.0005
 billboard = 1
 texture = ExtResource("2_acfei")
 
+[connection signal="selected" from="." to="." method="_on_selected"]
 [connection signal="button_down" from="Control/answer_1" to="." method="_on_answer_1_button_down"]
 [connection signal="button_down" from="Control/answer_2" to="." method="_on_answer_2_button_down"]
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
