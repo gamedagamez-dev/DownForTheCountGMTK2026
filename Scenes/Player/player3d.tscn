@@ -49,7 +49,7 @@ target_position = Vector3(0, -0.3, 0)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1117825676 groups=["interaction_check"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1278553685]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1278553685 groups=["interaction_check"]]
 shape = SubResource("CylinderShape3D_0dqq6")
 debug_color = Color(2.8878452e-07, 0.6508129, 0.08808903, 0.41960785)
 
