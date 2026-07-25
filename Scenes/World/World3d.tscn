@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://biaxkqq5sxa1a" path="res://Art/LeoArt/Truck.fbx" id="3_10vwu"]
 [ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
 [ext_resource type="Texture2D" uid="uid://bnql3q5t0n4ma" path="res://Resources/2dart/BlobGuyBillboard.png" id="4_oudrq"]
+[ext_resource type="Texture2D" uid="uid://bia5hspcg2e7v" path="res://Resources/2dart/SprintBillboard.png" id="6_10vwu"]
+[ext_resource type="Texture2D" uid="uid://de0mtiy63otk1" path="res://Resources/2dart/KissSpeedBillboard.png" id="7_61gt8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
@@ -59,6 +61,16 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_665xo"]
 albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0p3a"]
+albedo_texture = ExtResource("6_10vwu")
+emission_enabled = true
+emission_texture = ExtResource("6_10vwu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnr7a"]
+albedo_texture = ExtResource("7_61gt8")
+emission_enabled = true
+emission_texture = ExtResource("7_61gt8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10vwu"]
 albedo_texture = ExtResource("4_oudrq")
@@ -1316,7 +1328,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.3, 4.2000003, 36.6)
 light_bake_mode = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting" unique_id=827561461]
-transform = Transform3D(0.9999619, -0.0061705923, 0.0061705923, 0, 0.70710677, 0.70710677, -0.008726535, -0.7070798, 0.7070798, 0, 27.122967, 0)
+transform = Transform3D(0.9999619, -0.0061705923, 0.0061705913, 0, 0.70710665, 0.70710677, -0.008726535, -0.7070798, 0.7070797, 0, 27.122967, 0)
 light_color = Color(0.9723504, 0.44070956, 0.525682, 1)
 shadow_enabled = true
 shadow_opacity = 0.73
@@ -5619,7 +5631,47 @@ transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 [node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=16168381]
 visible = false
 
-[node name="Node3D" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
+[node name="Node3D4" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
+transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96592575, -10.790632, 12.457905, -52.70735)
+
+[node name="billboard" parent="Billboards/Node3D4" index="0" unique_id=1697181069]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
+
+[node name="antenna" parent="Billboards/Node3D4/billboard" index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+visible = false
+
+[node name="edge" parent="Billboards/Node3D4/billboard" index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D4/billboard" index="2" unique_id=1525483574]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
+
+[node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=16168381]
+visible = false
+
+[node name="Node3D5" parent="Billboards" unique_id=552441896 instance=ExtResource("3_quq03")]
+transform = Transform3D(2.2351742e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 2.2351742e-07, 52.54677, 7.957905, 31.912924)
+
+[node name="billboard" parent="Billboards/Node3D5" index="0" unique_id=1697181069]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14.140097, 0, 7.6293945e-06)
+
+[node name="antenna" parent="Billboards/Node3D5/billboard" index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+visible = false
+
+[node name="edge" parent="Billboards/Node3D5/billboard" index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D5/billboard" index="2" unique_id=1525483574]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_mnr7a")
+
+[node name="support" parent="Billboards/Node3D5/billboard" index="3" unique_id=16168381]
+visible = false
+
+[node name="Node3D" parent="Billboards" unique_id=1539121699 instance=ExtResource("3_quq03")]
 transform = Transform3D(-1.0739888e-07, 0, -1.387, 0, 2, 0, 2.457, 0, -6.062769e-08, 51.969734, 36.077766, 20.267906)
 
 [node name="billboard" parent="Billboards/Node3D" index="0" unique_id=1697181069]
@@ -5637,5 +5689,9 @@ visible = false
 
 [editable path="Billboards/Node3D2"]
 [editable path="Billboards/Node3D2/billboard"]
+[editable path="Billboards/Node3D4"]
+[editable path="Billboards/Node3D4/billboard"]
+[editable path="Billboards/Node3D5"]
+[editable path="Billboards/Node3D5/billboard"]
 [editable path="Billboards/Node3D"]
 [editable path="Billboards/Node3D/billboard"]
