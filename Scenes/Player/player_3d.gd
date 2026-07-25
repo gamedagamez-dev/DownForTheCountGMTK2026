@@ -9,7 +9,7 @@ extends CharacterBody3D
 @export var coyote_time = 0.15
 @export var jump_buffer_time = 0.15
 @export var acceleration: float = 30.0
-@export var friction: float = 90.0
+@export var friction: float = 120.0
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0
 var busy = false
@@ -29,8 +29,9 @@ var busy = false
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	toggle_pause()
 	# Hide the mouse cursor and lock it to the game window
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$PlayerUi.updateVampKissed(vampires_kissed)
 	Global.current_score = vampires_kissed
 

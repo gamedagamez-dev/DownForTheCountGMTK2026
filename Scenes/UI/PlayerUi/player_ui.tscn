@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://rjww0ho3ipa" path="res://Scenes/UI/PauseMenu/pause_menu.tscn" id="2_vsx7o"]
 [ext_resource type="Texture2D" uid="uid://cm5aygfxggest" path="res://Resources/2dart/lipgraphic.png" id="3_6m0m2"]
 [ext_resource type="Script" uid="uid://b2gf1xcxygr6t" path="res://Scenes/UI/PlayerUi/Timer.gd" id="4_l0dg2"]
+[ext_resource type="PackedScene" uid="uid://dodoxg3qj27ql" path="res://Scenes/UI/IntroScreen/IntroScreen.tscn" id="5_pti4i"]
 
 [node name="PlayerUi" type="Control" unique_id=425346966]
 layout_mode = 3
@@ -61,5 +62,8 @@ offset_bottom = 18.0
 theme_override_font_sizes/font_size = 55
 text = "00:00"
 script = ExtResource("4_l0dg2")
+
+[node name="IntroScreen" parent="Timercontainer" unique_id=1834678547 instance=ExtResource("5_pti4i")]
+layout_mode = 1
 
 [connection signal="timer_finished" from="Timercontainer/timerLabel" to="." method="_on_timer_label_timer_finished"]

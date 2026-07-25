@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dodoxg3qj27ql"]
+
+[ext_resource type="Script" uid="uid://b00ustw5i757a" path="res://Scenes/UI/IntroScreen/intro_screen.gd" id="1_d6flh"]
+
+[node name="IntroScreen" type="Control" unique_id=1834678547]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d6flh")
+metadata/_edit_vertical_guides_ = [567.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1243593545]
+layout_mode = 0
+offset_left = -469.0
+offset_top = -412.0
+offset_right = 1625.0
+offset_bottom = 1010.0
+color = Color(0.41540515, 0.057720497, 0.21497455, 0.3254902)
+
+[node name="Label" type="Label" parent="." unique_id=671568571]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 140.0
+offset_right = 932.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 50
+text = "Smooch as many vampires as possible!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=525553572]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 253.0
+offset_right = 1014.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 25
+text = "You're alone on New Year's Eve in New York City, 
+but you don't have anybody to smooch before the ball drops! 
+If you only you could find as many potential partners as possible to smooch. 
+ lucky for you, there are plenty of vampires that you'd be down to hit on!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=989908423]
+layout_mode = 0
+offset_left = 515.0
+offset_top = 533.0
+offset_right = 620.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 30
+text = "Continue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
