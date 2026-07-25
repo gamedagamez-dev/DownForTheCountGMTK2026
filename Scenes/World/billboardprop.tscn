@@ -26,7 +26,7 @@ texture_filter = 0
 [node name="Node3D" type="Node3D" unique_id=107295564]
 
 [node name="billboard" parent="." unique_id=1697181069 instance=ExtResource("1_xesgn")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="antenna" parent="billboard" index="0" unique_id=766873235]
 surface_material_override/0 = SubResource("StandardMaterial3D_l0sfu")

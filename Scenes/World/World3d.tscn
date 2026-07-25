@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://doywl67e42nyf" path="res://Scenes/World/npc.tscn" id="1_noce4"]
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
+[ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7tdgh"]
 
@@ -5611,3 +5612,23 @@ mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/ramp/StaticBody3D" unique_id=2128170822]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="Node3D" parent="." unique_id=107295564 instance=ExtResource("3_quq03")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.741385, 26.483883, 59.40299)
+
+[node name="support" parent="Node3D/billboard" parent_id_path=PackedInt32Array(107295564, 1697181069) index="3" unique_id=1902769071]
+visible = false
+
+[node name="Node3D2" parent="." unique_id=1965256920 instance=ExtResource("3_quq03")]
+transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -60.2279, 52.967766, 26.57371)
+
+[node name="support" parent="Node3D2/billboard" parent_id_path=PackedInt32Array(1965256920, 1697181069) index="3" unique_id=1902769071]
+visible = false
+
+[node name="Node3D3" parent="." unique_id=2070489541 instance=ExtResource("3_quq03")]
+transform = Transform3D(0.09649073, 0, -0.8948125, 0, 0.9, 0, 0.8948125, 0, 0.09649073, -29.149717, 2.3480058, -16.812563)
+
+[editable path="Node3D"]
+[editable path="Node3D/billboard"]
+[editable path="Node3D2"]
+[editable path="Node3D2/billboard"]
