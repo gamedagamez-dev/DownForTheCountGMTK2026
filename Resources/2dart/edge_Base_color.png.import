@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn5ewh1f838rk"
-path.s3tc="res://.godot/imported/billboard_2D_View.png-0924d8c11e21627d19d7343439b7c914.s3tc.ctex"
+uid="uid://q73wmuq82qib"
+path.s3tc="res://.godot/imported/edge_Base_color.png-a6d3755cbe55eb7bbcb5b8e616c737fd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Resources/2dart/billboard_2D_View.png"
-dest_files=["res://.godot/imported/billboard_2D_View.png-0924d8c11e21627d19d7343439b7c914.s3tc.ctex"]
+source_file="res://Resources/2dart/edge_Base_color.png"
+dest_files=["res://.godot/imported/edge_Base_color.png-a6d3755cbe55eb7bbcb5b8e616c737fd.s3tc.ctex"]
 
 [params]
 
