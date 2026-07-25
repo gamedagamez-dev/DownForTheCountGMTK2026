@@ -192,7 +192,7 @@ Already_Failed = " G'day."
 Already_Succeceded = " Have a very good night, and a better year!"
 
 [node name="CountReeseIde" parent="Vampires" unique_id=177818562 instance=ExtResource("1_noce4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.600975, 32.834427, 101.10231)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.600975, 31.313002, 101.10231)
 tree_size = 2
 _name = "Count Reese Ide"
 question_1 = " Well hey there, beautiful. What's a sweet thing like you doing out here on your own?"
@@ -801,11 +801,119 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.4
 [node name="CarSadan3" parent="cars" unique_id=316563458 instance=ExtResource("2_4vpf2")]
 transform = Transform3D(-0.37075323, 0, 0.92873144, 0, 1, 0, -0.92873144, 0, -0.37075323, -60.36365, 0.77321863, 3.7873096)
 
+[node name="CarSadan6" parent="cars" unique_id=1447578372 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.143284, 0, 0.9896816, 0, 1, 0, -0.9896816, 0, 0.143284, -61.51437, 0.77321863, 12.044111)
+
+[node name="CarSadan4" parent="cars" unique_id=1818317245 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.14328402, 0, 0.9896816, 0, 1, 0, -0.9896816, 0, 0.14328402, -60.55446, 0.77321863, 0.219827)
+
+[node name="CarSadan13" parent="cars" unique_id=362204493 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9188744, 0, 0.3945502, 0, 1, 0, -0.3945502, 0, -0.9188744, -61.383015, 2.4987018, 2.1494634)
+
+[node name="CarSadan16" parent="cars" unique_id=1755017406 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9955511, 0.061251123, -0.07159792, 0.08214685, 0.9364166, -0.34113866, 0.04615035, -0.34550253, -0.93728226, -61.383015, 2.96795, -4.8770723)
+
+[node name="CarSadan17" parent="cars" unique_id=665150245 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.04425454, 0.5658788, -0.82329977, 0.0632754, -0.8208647, -0.5676065, -0.9970147, -0.07721371, 0.0005207514, -61.383015, 5.350075, -18.91614)
+
+[node name="CarSadan15" parent="cars" unique_id=1203870869 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.08325945, -0.5300997, 0.8438378, -0.083259456, 0.8475176, 0.5241963, -0.99304366, -0.026613174, -0.11469966, -62.39001, 1.4852185, -2.4976351)
+
+[node name="CarSadan14" parent="cars" unique_id=1299580954 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.10197159, -0.5, 0.8600011, -0.058873326, 0.8660254, 0.49652186, -0.9930437, 0, -0.11774665, -62.183014, 2.4987018, 6.0494633)
+
+[node name="CarSadan5" parent="cars" unique_id=1010991269 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.117746726, 0, 0.99304366, 0, 1, 0, -0.99304366, 0, -0.117746726, -60.153263, 0.77321863, -2.5512815)
+
+[node name="CarSadan7" parent="cars" unique_id=1574092303 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.59849346, 0, 0.8011277, 0, 1, 0, -0.8011277, 0, -0.59849346, -59.418617, 0.77321863, -9.006065)
+
+[node name="CarSadan8" parent="cars" unique_id=1084531301 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.14328402, 0, 0.98968166, 0, 1, 0, -0.98968166, 0, 0.14328402, -59.418617, 0.77321863, -15.706066)
+
+[node name="CarSadan9" parent="cars" unique_id=1078961268 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.117746696, 0, 0.99304366, 0, 1, 0, -0.99304366, 0, -0.117746696, -59.418617, 0.77321863, -18.806067)
+
+[node name="CarSadan10" parent="cars" unique_id=963307605 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.3945502, 0, 0.9188744, 0, 1, 0, -0.9188744, 0, 0.3945502, -59.418617, 0.77321863, -25.306067)
+
+[node name="CarSadan18" parent="cars" unique_id=697348763 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.9934708, -9.2617963e-10, 0.114086956, -0.00597172, 0.9986292, 0.052001808, -0.113930576, -0.052343577, 0.9921088, -59.716747, 2.6487453, -24.093168)
+
+[node name="CarSadan19" parent="cars" unique_id=1734685902 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.7814304, -0.4137894, 0.46706006, -0.365409, 0.9101894, 0.19501781, -0.50580937, -0.018275142, -0.86245173, -61.466244, 1.6246715, -27.985441)
+
+[node name="CarSadan11" parent="cars" unique_id=985946191 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.61892843, 0, 0.78544736, 0, 1, 0, -0.78544736, 0, 0.61892843, -59.418617, 0.77321863, -32.906067)
+
+[node name="CarSadan12" parent="cars" unique_id=1257188367 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.14328408, 0, 0.98968154, 0, 1, 0, -0.98968154, 0, 0.14328408, -59.418617, 0.6467142, -37.406067)
+
+[node name="CarSadan20" parent="cars" unique_id=1923896438 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.79522, 0.7755996, -52.892487)
+
+[node name="CarSadan25" parent="cars" unique_id=968199795 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9972335, 0, -0.07433161, 0, 1, 0, 0.07433161, 0, -0.9972335, -36.79522, 0.7755996, -45.95325)
+
+[node name="CarSadan21" parent="cars" unique_id=1132284209 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.99402857, 0, -0.10911986, 0, 1, 0, 0.10911986, 0, -0.99402857, -36.79522, 0.7755996, -66.19248)
+
+[node name="CarSadan22" parent="cars" unique_id=744362594 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.79522, 0.7755996, -72.89248)
+
+[node name="CarSadan23" parent="cars" unique_id=1044663564 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.79522, 0.7755996, -86.39248)
+
+[node name="CarSadan24" parent="cars" unique_id=255703488 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.79522, 0.7755996, -114.49248)
+
 [node name="CarSadan2" parent="cars" unique_id=507522134 instance=ExtResource("2_4vpf2")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5577784, 1.2999983, -8.602579)
 
 [node name="Truck" parent="cars" unique_id=1896618545 instance=ExtResource("3_10vwu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -62.08959, 0.9192476, 6.834489)
+
+[node name="Truck3" parent="cars" unique_id=456732178 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -60.98959, 0.9192476, -5.5655117)
+
+[node name="Truck4" parent="cars" unique_id=650512110 instance=ExtResource("3_10vwu")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -59.08959, 0.9192476, -12.965511)
+
+[node name="Truck9" parent="cars" unique_id=317755141 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.33658442, -0.281675, -0.8985379, -0.0758015, 0.9430116, -0.32401127, 0.9385976, 0.17716765, 0.29605165, -61.05008, 2.4381104, -16.369465)
+
+[node name="Truck8" parent="cars" unique_id=541938394 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-4.371139e-08, 1, -7.642742e-15, -0.99555755, -4.3517204e-08, -0.094155304, -0.094155304, -4.1156514e-09, 0.99555755, -60.545635, 4.229196, -11.807936)
+
+[node name="Truck5" parent="cars" unique_id=1134824171 instance=ExtResource("3_10vwu")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -59.08959, 0.9192476, -21.76551)
+
+[node name="Truck6" parent="cars" unique_id=803570981 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.70710665, 0, 0.7071069, 0, 1, 0, -0.7071069, 0, 0.70710665, -59.08959, 0.9192476, -28.965511)
+
+[node name="Truck10" parent="cars" unique_id=1260076159 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.9781342, -0.2066351, -0.02356571, -0.20669249, 0.97840595, 0, 0.02305683, 0.0048708557, -0.99972224, -60.06929, 2.465397, -35.183098)
+
+[node name="Truck11" parent="cars" unique_id=1585313340 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.653545, 0.88168365, -58.982838)
+
+[node name="Truck12" parent="cars" unique_id=293513846 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -36.653545, 0.88168365, -79.482834)
+
+[node name="Truck13" parent="cars" unique_id=2002774987 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.99833375, 0, -0.05770282, 0, 1, 0, 0.05770282, 0, 0.99833375, -36.653545, 0.88168365, -92.68283)
+
+[node name="Truck14" parent="cars" unique_id=1737154768 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, -36.653545, 0.88168365, -100.28283)
+
+[node name="Truck15" parent="cars" unique_id=749743493 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -36.653545, 0.88168365, -120.98283)
+
+[node name="Truck2" parent="cars" unique_id=704296253 instance=ExtResource("3_10vwu")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -62.08959, 0.8296838, 9.434489)
+
+[node name="Truck7" parent="cars" unique_id=1208399718 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.7071069, 7.1054274e-15, -0.70710665, -6.181724e-08, -1, 6.181724e-08, -0.70710665, 8.742278e-08, 0.7071069, -62.08959, 5.5296845, 9.434489)
 
 [node name="Player3d" parent="." unique_id=1261980593 instance=ExtResource("1_oywug")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 8.3, 4, 28.950003)
@@ -1219,7 +1327,7 @@ shape = SubResource("ConcavePolygonShape3D_fm7lc")
 [node name="TestCityLights" type="Node" parent="Lighting" unique_id=820877153]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=307202859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.600006, 8.6, 20.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -107.600006, 10.065046, 20.5)
 light_bake_mode = 1
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=677308730]
@@ -1447,7 +1555,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.84112, 11.440863, 141.338
 light_bake_mode = 1
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=821283584]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.100006, 8.6, 20.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.100006, 9.832286, 20.5)
+light_bake_mode = 1
+
+[node name="OmniLight3D62" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=53543852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.99049, 9.832286, 13.132038)
+light_bake_mode = 1
+
+[node name="OmniLight3D63" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=1486960926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.1086, 9.832286, 13.132038)
+light_bake_mode = 1
+
+[node name="OmniLight3D64" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=798410843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38063, 9.832286, 13.132038)
 light_bake_mode = 1
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=402652584]
@@ -1689,6 +1809,36 @@ surface_material_override/0 = SubResource("StandardMaterial3D_61gt8")
 [node name="StaticBody3D" type="StaticBody3D" parent="Buildings/BorderBuildings/WorldBorder24" unique_id=1160208243]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/BorderBuildings/WorldBorder24/StaticBody3D" unique_id=876719277]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="WorldBorder29" type="MeshInstance3D" parent="Buildings/BorderBuildings" unique_id=782053940]
+transform = Transform3D(-1, 2.2480532e-13, -3.6178592e-06, 0, 9.86, 3.617859e-06, 1.509958e-07, 1.4888184e-06, -23.96, -59.516785, 0.5839958, 1.1460032)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_61gt8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/BorderBuildings/WorldBorder29" unique_id=2053406637]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/BorderBuildings/WorldBorder29/StaticBody3D" unique_id=1582816729]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="WorldBorder30" type="MeshInstance3D" parent="Buildings/BorderBuildings" unique_id=391071111]
+transform = Transform3D(-1, 2.2024543e-13, -4.3215e-06, 0, 9.66, 4.3215e-06, 1.509958e-07, 1.4586194e-06, -28.62, -59.516785, 0.5839958, -24.553997)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_61gt8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/BorderBuildings/WorldBorder30" unique_id=377160630]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/BorderBuildings/WorldBorder30/StaticBody3D" unique_id=1342664407]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="WorldBorder31" type="MeshInstance3D" parent="Buildings/BorderBuildings" unique_id=220103312]
+transform = Transform3D(-1, 2.5763698e-13, -3.23735e-06, 0, 11.3, 3.23735e-06, 1.509958e-07, 1.7062526e-06, -21.44, -58.67794, 0.583996, -11.975757)
+mesh = SubResource("BoxMesh_7tdgh")
+surface_material_override/0 = SubResource("StandardMaterial3D_61gt8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Buildings/BorderBuildings/WorldBorder31" unique_id=1038589416]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buildings/BorderBuildings/WorldBorder31/StaticBody3D" unique_id=850977178]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="WorldBorder25" type="MeshInstance3D" parent="Buildings/BorderBuildings" unique_id=771427081]
@@ -6286,12 +6436,21 @@ surface_material_override/0 = SubResource("StandardMaterial3D_7tdgh")
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="ramp" type="MeshInstance3D" parent="Platforms" unique_id=1069934932]
-transform = Transform3D(0.21430093, -0.23898691, 6.128251, -0.38820562, 0.4329241, 3.3829765, -2.9670475, -0.07390468, -3.0015727e-07, -69.2, 2.5500004, -18.400003)
+transform = Transform3D(-2.2386006e-07, -0.35355344, 7.6296816, 9.2725855e-08, 0.35355335, 7.6296835, -3, 3.731001e-08, -3.3350398e-07, -63.415073, 3.4349246, -18.400003)
 mesh = SubResource("BoxMesh_7tdgh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Platforms/ramp" unique_id=328750175]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/ramp/StaticBody3D" unique_id=2128170822]
+shape = SubResource("ConcavePolygonShape3D_fm7lc")
+
+[node name="ramp2" type="MeshInstance3D" parent="Platforms" unique_id=1557343970]
+transform = Transform3D(-5.2980212e-08, 3.6416006, 0.63639605, 2.194512e-08, -3.6415997, 0.63639617, -0.71, -3.8429312e-07, -2.7817753e-08, -62.42159, 0.78680974, -18.400003)
+mesh = SubResource("BoxMesh_7tdgh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Platforms/ramp2" unique_id=1324670470]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platforms/ramp2/StaticBody3D" unique_id=810822851]
 shape = SubResource("ConcavePolygonShape3D_fm7lc")
 
 [node name="Billboards" type="Node" parent="." unique_id=1880781328]
