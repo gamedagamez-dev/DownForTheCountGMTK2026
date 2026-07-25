@@ -127,7 +127,9 @@ var is_talk = false
 func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("interaction_check"):
 		can_talk = true
+		print("in")
 		while can_talk == true:
+			print("in2")
 			if Input.is_action_just_pressed("interaction"):
 				is_talk = true
 				area.get_parent().busy = true
@@ -135,7 +137,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				while is_talk == true:
 					await get_tree().create_timer(1.0/240).timeout
-				Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 				is_talk = false
 				area.get_parent().busy = false
 			await get_tree().create_timer(1.0/240).timeout

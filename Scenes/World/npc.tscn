@@ -37,7 +37,7 @@ Already_Failed = "dont talk to me, LOSER!!!!!"
 Already_Succeceded = "kiss me again"
 
 [node name="Control" type="Control" parent="." unique_id=173574903]
-visible = false
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

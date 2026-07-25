@@ -66,7 +66,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			pause_menu.visible = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		#toggle_pause()
+		toggle_pause()
 		
 
 func _physics_process(delta: float) -> void:
@@ -116,5 +116,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func toggle_pause():
-	var new_pause_state = !get_tree().paused
-	get_tree().paused = new_pause_state
+	#var new_pause_state = !get_tree().paused
+	#get_tree().paused = new_pause_state
+	get_tree().paused = !get_tree().paused
