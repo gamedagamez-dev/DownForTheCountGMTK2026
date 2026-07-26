@@ -1832,6 +1832,10 @@ light_bake_mode = 1
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -136.60124, 76.9165, -24.648996)
 light_bake_mode = 1
 
+[node name="OmniLight3D65" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=367529211]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -159.8341, 8.180558, -14.865937)
+light_bake_mode = 1
+
 [node name="OmniLight3D53" type="OmniLight3D" parent="Lighting/TestCityLights" unique_id=2118865809]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -136.60124, 76.9165, 22.151003)
 light_bake_mode = 1
@@ -7050,6 +7054,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
 [node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=16168381]
 visible = false
 
+[node name="Node3D13" parent="Billboards" unique_id=142125922 instance=ExtResource("3_quq03")]
+transform = Transform3D(-0.011673564, 0, 0.9999319, 0, 1, 0, -0.9999319, 0, -0.011673564, -60.485535, 58.710102, -135.28035)
+
+[node name="billboard" parent="Billboards/Node3D13" index="0" unique_id=1697181069]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
+
+[node name="antenna" parent="Billboards/Node3D13/billboard" index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+visible = false
+
+[node name="edge" parent="Billboards/Node3D13/billboard" index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D13/billboard" index="2" unique_id=1525483574]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
+
+[node name="support" parent="Billboards/Node3D13/billboard" index="3" unique_id=16168381]
+visible = false
+
 [node name="Node3D11" parent="Billboards" unique_id=1581681434 instance=ExtResource("3_quq03")]
 transform = Transform3D(0.033223502, 0, -0.9994479, 0, 1, 0, 0.9994479, 0, 0.033223502, 52.128567, 12.457905, -88.71601)
 
@@ -7194,6 +7218,8 @@ visible = false
 [editable path="Billboards/Node3D10/billboard"]
 [editable path="Billboards/Node3D4"]
 [editable path="Billboards/Node3D4/billboard"]
+[editable path="Billboards/Node3D13"]
+[editable path="Billboards/Node3D13/billboard"]
 [editable path="Billboards/Node3D11"]
 [editable path="Billboards/Node3D11/billboard"]
 [editable path="Billboards/Node3D8"]
