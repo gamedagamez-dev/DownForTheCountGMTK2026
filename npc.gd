@@ -118,7 +118,7 @@ func scroll():
 		if $Control/dialogue.visible_characters >= $Control/dialogue.text.length():
 			scrolling = false
 			break
-		if Input.is_action_just_pressed("skipDialogue"):
+		if Input.is_action_pressed("skipDialogue"):
 			$Control/dialogue.visible_characters = -1
 			scrolling = false
 			break
