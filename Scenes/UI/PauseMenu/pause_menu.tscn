@@ -83,9 +83,9 @@ mouse_filter = 1
 
 [node name="MainMenuButton" type="Button" parent="MainMenucontainer" unique_id=1830346266]
 layout_mode = 0
-offset_left = -36.0
+offset_left = -37.0
 offset_top = 40.0
-offset_right = 77.0
+offset_right = 76.0
 offset_bottom = 66.0
 text = "Quit to Main menu"
 
