@@ -17,6 +17,7 @@
 radius = 2.5
 
 [node name="Player3d" type="CharacterBody3D" unique_id=1261980593]
+floor_block_on_wall = false
 floor_snap_length = 0.3
 script = ExtResource("1_meivf")
 
