@@ -44,6 +44,7 @@ func dialogue_start():
 	$Control.visible = true
 	if tree_size == 0:
 		$Control/dialogue.text = Conclusion
+		$Control/dialogue.visible_characters = -1
 		outcome = 1
 		$Control/answer_1.text = "smooch em'"
 		$Control/answer_2.visible = false
@@ -53,6 +54,7 @@ func dialogue_start():
 		return
 	if outcome == 1:
 		$Control/dialogue.text = Already_Succeceded
+		$Control/dialogue.visible_characters = -1
 		$Control/answer_1.text = "Leave"
 		$Control/answer_2.visible = false
 		await $Control/answer_1.button_down
@@ -60,6 +62,7 @@ func dialogue_start():
 		$Control.visible = false
 	elif outcome == 2:
 		$Control/dialogue.text = Already_Failed
+		$Control/dialogue.visible_characters = -1
 		$Control/answer_1.text = "Leave"
 		$Control/answer_2.visible = false
 		await $Control/answer_1.button_down
@@ -89,6 +92,7 @@ func dialogue_start():
 			progress += 1
 			if progress == tree_size:
 				$Control/dialogue.text = Conclusion
+				$Control/dialogue.visible_characters = -1
 				outcome = 1
 				$Control/answer_1.text = "smooch em'"
 				$Control/answer_2.visible = false
@@ -100,6 +104,7 @@ func dialogue_start():
 				dialogue_start()
 		else:
 			$Control/dialogue.text = failure_list[progress]
+			$Control/dialogue.visible_characters = -1
 			outcome = 2
 			$Control/answer_1.text = "Leave"
 			$Control/answer_2.visible = false
@@ -167,10 +172,4 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 
 
 func _on_selected() -> void:
-	if not tree_size == 0:
-		$Control/dialogue.visible_characters = 0
-		scrolling = true
-	else:
-		$Control/dialogue.visible_characters = -1
-		scrolling = false
-		$Control/dialogue.text = Conclusion
+	pass # scroll state is fully handled in dialogue_start() after `await selected`
