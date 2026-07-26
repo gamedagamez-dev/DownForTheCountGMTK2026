@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rjww0ho3ipa"]
 
 [ext_resource type="Script" uid="uid://cdllx320iv1m" path="res://Scenes/UI/PauseMenu/pause_menu.gd" id="1_wtndc"]
-[ext_resource type="AudioStream" uid="uid://dj3xbwce6xbhn" path="res://Aris/Countdown1.wav" id="2_2ts85"]
+[ext_resource type="AudioStream" uid="uid://iism8am73lxn" path="res://Aris/Countdown1.wav" id="2_2ts85"]
 
 [node name="Pause_Menu" type="Control" unique_id=1965381542]
 process_mode = 3
@@ -106,7 +106,7 @@ offset_top = 18.0
 offset_right = 116.0
 offset_bottom = 34.0
 step = 0.5
-value = 50.0
+value = 100.0
 
 [node name="QuitContainer" type="Control" parent="." unique_id=2117172550]
 anchors_preset = 0

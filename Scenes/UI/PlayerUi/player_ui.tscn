@@ -136,4 +136,6 @@ position = Vector2(540, 321)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_6m0m2")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1553156167]
+
 [connection signal="timer_finished" from="Timercontainer/timerLabel" to="." method="_on_timer_label_timer_finished"]

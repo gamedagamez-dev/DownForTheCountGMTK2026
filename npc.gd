@@ -27,6 +27,9 @@ var failure_list = [0]
 var scrolling = false
 var outcome = 0 #0 = not talked to, 1 = success, 2 = failure
 var already_smooched = false
+var kiss_sfx = preload("res://Aris/downforthecountSFX/countkiss.wav") #if anyone is looking at this for refrence. DO NOT DO THIS. THIS WILL CAUSE HIGH MEMORY USAGE
+var fail_sfx = preload("res://Aris/downforthecountSFX/FailSound.wav")
+var hey_there_hot_stuff = preload("res://Aris/downforthecountSFX/countwhistle.wav")
 signal selected()
 
 func _ready() -> void:
@@ -111,6 +114,9 @@ func dialogue_start():
 			await $Control/answer_1.button_down
 			is_talk = false
 			$Control.visible = false
+			$AudioStreamPlayer.stream = fail_sfx
+			$AudioStreamPlayer.playing = true
+
 
 func scroll():
 	while scrolling == true:
@@ -143,10 +149,12 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	if area.is_in_group("interaction_check"):
 		can_talk = true
 		$Sprite3D.visible = true
+		if outcome == 0:
+			$AudioStreamPlayer.stream = hey_there_hot_stuff
+			$AudioStreamPlayer.playing = true
 		while can_talk == true:
 			print(area.global_position)
 			look_at(Vector3(area.global_position.x,position.y,area.global_position.z))
-			#look_at(Vector3(19.8,2.5,67.2))
 			if Input.is_action_just_pressed("interaction"):
 				$Sprite3D.visible = false
 				is_talk = true
@@ -166,6 +174,8 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 				is_talk = false
 				if outcome == 1 and not already_smooched:
 					area.get_parent().vampires_kissed += 1
+					$AudioStreamPlayer.stream = kiss_sfx
+					$AudioStreamPlayer.playing = true
 					area.get_parent().get_node("PlayerUi").updateVampKissed(area.get_parent().vampires_kissed)
 					already_smooched = true
 				
