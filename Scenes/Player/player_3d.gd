@@ -38,10 +38,9 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if the player moved the mouse
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and busy == false:
 		# 1. Rotate the whole player body left and right (Y-axis)
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		
 		# 2. Rotate the camera pivot up and down (X-axis)
 		camera_pivot.rotate_x(-event.relative.y * mouse_sensitivity)
 		
