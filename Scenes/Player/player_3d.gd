@@ -35,6 +35,9 @@ func _ready() -> void:
 	$PlayerUi.updateVampKissed(vampires_kissed)
 	Global.current_score = vampires_kissed
 
+func talking_to_baddie(StartOrStop):
+	get_node("PlayerUi/PauseMenu/AudioStreamPlayer").stream_paused = StartOrStop
+	$RomanceAudioPlayer.playing = StartOrStop
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Check if the player moved the mouse
