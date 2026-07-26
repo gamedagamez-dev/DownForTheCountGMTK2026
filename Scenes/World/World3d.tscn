@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://baipuylukxhc3"]
 
+[ext_resource type="Script" uid="uid://dota181hnfs8e" path="res://Scenes/World/world_3d.gd" id="1_fm7lc"]
 [ext_resource type="PackedScene" uid="uid://doywl67e42nyf" path="res://Scenes/World/npc.tscn" id="1_noce4"]
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 [ext_resource type="PackedScene" uid="uid://b5shois705jdx" path="res://Art/LeoArt/CarSadan.fbx" id="2_4vpf2"]
@@ -19,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://l2ryry8far3j" path="res://Resources/2dart/AppleBillboard.png" id="13_0wnin"]
 [ext_resource type="Texture2D" uid="uid://b4euvyo85mnfq" path="res://Resources/2dart/Billboard_Guide.png" id="14_ticra"]
 [ext_resource type="Texture2D" uid="uid://dwjpeeowrrr45" path="res://Resources/2dart/DoorBellBuildboard.png" id="16_cojm6"]
+[ext_resource type="PackedScene" uid="uid://bybfgspvpxh2k" path="res://Art/LeoArt/NYBall.fbx" id="20_j4wm6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
@@ -122,7 +124,56 @@ emission_enabled = true
 emission_energy_multiplier = 0.5
 emission_texture = ExtResource("4_oudrq")
 
+[sub_resource type="Animation" id="Animation_fm7lc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NYBall/Sphere:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m5k1f"]
+resource_name = "balldrop"
+length = 120.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NYBall/Sphere:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 120),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -19.54, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yyung"]
+_data = {
+&"RESET": SubResource("Animation_fm7lc"),
+&"balldrop": SubResource("Animation_m5k1f")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5k1f"]
+albedo_color = Color(0.2541431, 4.6999678e-05, 0.25701216, 1)
+metallic = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyung"]
+metallic = 1.0
+metallic_specular = 0.0
+roughness = 0.2
+emission_enabled = true
+emission = Color(0.34901962, 0.6392157, 1, 1)
+
 [node name="World3d" type="Node3D" unique_id=1464030692]
+script = ExtResource("1_fm7lc")
 
 [node name="Vampires" type="Node" parent="." unique_id=1500927625]
 
@@ -6984,16 +7035,16 @@ transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -6
 [node name="billboard" parent="Billboards/Node3D2" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D2/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D2/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="edge" parent="Billboards/Node3D2/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D2/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D2/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D2/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 
-[node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D6" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
@@ -7002,17 +7053,17 @@ transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -6
 [node name="billboard" parent="Billboards/Node3D6" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D6/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D6/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="edge" parent="Billboards/Node3D6/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D6/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D6/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D6/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_dxpmg")
 
-[node name="support" parent="Billboards/Node3D6/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D6/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D10" parent="Billboards" unique_id=174337272 instance=ExtResource("3_quq03")]
@@ -7021,17 +7072,17 @@ transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -1
 [node name="billboard" parent="Billboards/Node3D10" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D10/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D10/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="edge" parent="Billboards/Node3D10/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D10/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D10/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D10/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_rc10j")
 
-[node name="support" parent="Billboards/Node3D10/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D10/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D4" parent="Billboards" unique_id=1717853378 instance=ExtResource("3_quq03")]
@@ -7040,18 +7091,18 @@ transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96
 [node name="billboard" parent="Billboards/Node3D4" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D4/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D4/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D4/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D4/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D4/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D4/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
 
-[node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D13" parent="Billboards" unique_id=142125922 instance=ExtResource("3_quq03")]
@@ -7060,18 +7111,18 @@ transform = Transform3D(-0.011673564, 0, 0.9999319, 0, 1, 0, -0.9999319, 0, -0.0
 [node name="billboard" parent="Billboards/Node3D13" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D13/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D13/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D13/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D13/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D13/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D13/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
 
-[node name="support" parent="Billboards/Node3D13/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D13/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D11" parent="Billboards" unique_id=1581681434 instance=ExtResource("3_quq03")]
@@ -7080,18 +7131,18 @@ transform = Transform3D(0.033223502, 0, -0.9994479, 0, 1, 0, 0.9994479, 0, 0.033
 [node name="billboard" parent="Billboards/Node3D11" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D11/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D11/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D11/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D11/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D11/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D11/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_cojm6")
 
-[node name="support" parent="Billboards/Node3D11/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D11/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D8" parent="Billboards" unique_id=557026784 instance=ExtResource("3_quq03")]
@@ -7100,18 +7151,18 @@ transform = Transform3D(0.9999983, 0, -0.0018811226, 0, 1, 0, 0.0018811226, 0, 0
 [node name="billboard" parent="Billboards/Node3D8" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D8/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D8/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D8/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D8/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D8/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D8/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_nyqfy")
 
-[node name="support" parent="Billboards/Node3D8/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D8/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D7" parent="Billboards" unique_id=370598641 instance=ExtResource("3_quq03")]
@@ -7120,18 +7171,18 @@ transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96
 [node name="billboard" parent="Billboards/Node3D7" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D7/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D7/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D7/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D7/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D7/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D7/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_outmo")
 
-[node name="support" parent="Billboards/Node3D7/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D7/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D12" parent="Billboards" unique_id=2040258337 instance=ExtResource("3_quq03")]
@@ -7140,18 +7191,18 @@ transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96
 [node name="billboard" parent="Billboards/Node3D12" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D12/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D12/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D12/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D12/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D12/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D12/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_7ypol")
 
-[node name="support" parent="Billboards/Node3D12/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D12/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D9" parent="Billboards" unique_id=1478098037 instance=ExtResource("3_quq03")]
@@ -7160,18 +7211,18 @@ transform = Transform3D(0.0051149577, 0, 0.9999869, 0, 1, 0, -0.9999869, 0, 0.00
 [node name="billboard" parent="Billboards/Node3D9" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D9/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D9/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D9/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D9/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D9/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D9/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_wn2bs")
 
-[node name="support" parent="Billboards/Node3D9/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D9/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D5" parent="Billboards" unique_id=552441896 instance=ExtResource("3_quq03")]
@@ -7180,18 +7231,18 @@ transform = Transform3D(2.2351742e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 2
 [node name="billboard" parent="Billboards/Node3D5" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14.140097, 0, 7.6293945e-06)
 
-[node name="antenna" parent="Billboards/Node3D5/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D5/billboard" index="0" unique_id=168102861]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
 
-[node name="edge" parent="Billboards/Node3D5/billboard" index="1" unique_id=1434340184]
+[node name="edge" parent="Billboards/Node3D5/billboard" index="1" unique_id=2133277511]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
-[node name="poster" parent="Billboards/Node3D5/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D5/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 surface_material_override/0 = SubResource("StandardMaterial3D_mnr7a")
 
-[node name="support" parent="Billboards/Node3D5/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D5/billboard" index="3" unique_id=579453682]
 visible = false
 
 [node name="Node3D" parent="Billboards" unique_id=1539121699 instance=ExtResource("3_quq03")]
@@ -7200,15 +7251,29 @@ transform = Transform3D(-1.0739888e-07, 0, -1.387, 0, 2, 0, 2.457, 0, -6.062769e
 [node name="billboard" parent="Billboards/Node3D" index="0" unique_id=1697181069]
 transform = Transform3D(0.8, 0, -1.0658141e-14, 0, 0.8, 0, 0, 0, 0.8, 3.2836885, 0.7195492, 0.08191681)
 
-[node name="antenna" parent="Billboards/Node3D/billboard" index="0" unique_id=509826140]
+[node name="antenna" parent="Billboards/Node3D/billboard" index="0" unique_id=168102861]
 visible = false
 
-[node name="poster" parent="Billboards/Node3D/billboard" index="2" unique_id=1525483574]
+[node name="poster" parent="Billboards/Node3D/billboard" index="2" unique_id=1423255151]
 transform = Transform3D(100, 1.8189894e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.29088974, 0.018089294, -0.089035034)
 surface_material_override/0 = SubResource("StandardMaterial3D_10vwu")
 
-[node name="support" parent="Billboards/Node3D/billboard" index="3" unique_id=16168381]
+[node name="support" parent="Billboards/Node3D/billboard" index="3" unique_id=579453682]
 visible = false
+
+[node name="BallDrop" type="Node" parent="." unique_id=1353037659]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BallDrop" unique_id=1463027706]
+libraries/ = SubResource("AnimationLibrary_yyung")
+
+[node name="NYBall" parent="BallDrop" unique_id=1177568000 instance=ExtResource("20_j4wm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.823925, 2.619995, 37.669823)
+
+[node name="Cylinder" parent="BallDrop/NYBall" index="0" unique_id=924239952]
+surface_material_override/0 = SubResource("StandardMaterial3D_m5k1f")
+
+[node name="Sphere" parent="BallDrop/NYBall" index="1" unique_id=1934575]
+surface_material_override/0 = SubResource("StandardMaterial3D_yyung")
 
 [editable path="Billboards/Node3D2"]
 [editable path="Billboards/Node3D2/billboard"]
@@ -7234,3 +7299,4 @@ visible = false
 [editable path="Billboards/Node3D5/billboard"]
 [editable path="Billboards/Node3D"]
 [editable path="Billboards/Node3D/billboard"]
+[editable path="BallDrop/NYBall"]
