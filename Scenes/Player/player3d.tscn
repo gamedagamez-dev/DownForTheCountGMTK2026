@@ -4,7 +4,8 @@
 [ext_resource type="Material" uid="uid://dfkhi0vautvql" path="res://Resources/cellshade.tres" id="2_1uwsh"]
 [ext_resource type="PackedScene" uid="uid://bhqqukjsrwm3i" path="res://Scenes/UI/PlayerUi/player_ui.tscn" id="2_vce6t"]
 [ext_resource type="Material" uid="uid://cedicqkipx0w4" path="res://Resources/outline.tres" id="3_x07ym"]
-[ext_resource type="AudioStream" uid="uid://cy1oxvnhskkjw" path="res://Aris/countownromance.wav" id="5_x07ym"]
+[ext_resource type="AudioStream" uid="uid://4aelm4lkeoq0" path="res://Aris/countownromance.wav" id="5_x07ym"]
+[ext_resource type="AudioStream" uid="uid://b18df3u6r7w7y" path="res://Aris/NewFootsteps/JumpLanding.wav" id="6_7nnyn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk0t1"]
 
@@ -59,5 +60,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49382275, -0.5075455)
 
 [node name="RomanceAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1371206447]
 stream = ExtResource("5_x07ym")
+bus = &"music"
+
+[node name="FootstepAudio" type="AudioStreamPlayer3D" parent="." unique_id=2006361075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+volume_db = -2.0
+bus = &"sfx"
+
+[node name="LandingAudio" type="AudioStreamPlayer3D" parent="." unique_id=369737287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+stream = ExtResource("6_7nnyn")
+volume_db = -4.0
+bus = &"sfx"
 
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
