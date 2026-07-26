@@ -75,7 +75,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("movement_jump") and busy == false:
 		jump_buffer_timer = jump_buffer_time
 		if is_on_floor() or coyote_timer > 0.0:
-			velocity.y = jump_velocity
+			velocity.y = jump_velocity + (1.8 * int(Global.current_score >= 2))
 			coyote_timer = 0.0
 			jump_buffer_timer = 0.0
 		#elif is_on_wall_only():
