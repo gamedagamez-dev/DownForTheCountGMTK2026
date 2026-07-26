@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://phwng8gkfnav"]
+
+[ext_resource type="PackedScene" uid="uid://biaxkqq5sxa1a" path="res://Art/LeoArt/Truck.fbx" id="1_qiqo7"]
+[ext_resource type="Material" uid="uid://b81de3mjsd1w0" path="res://Art/LeoArt/Mats/Truck/Truck.tres" id="2_8ykan"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0nv3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Truck" unique_id=470163624 instance=ExtResource("1_qiqo7")]
+
+[node name="Truck" parent="." index="0" unique_id=1272811439]
+surface_material_override/0 = ExtResource("2_8ykan")
+
+[node name="TruckWheel" parent="." index="2" unique_id=1867792901]
+surface_material_override/0 = SubResource("StandardMaterial3D_t0nv3")

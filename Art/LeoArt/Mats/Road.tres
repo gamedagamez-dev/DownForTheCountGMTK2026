@@ -1,3 +1,10 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://u00rn2277mub"]
 
+[ext_resource type="Texture2D" uid="uid://06cvlmepj12o" path="res://Art/LeoArt/Mats/Road/Untitled_DefaultMaterial_BaseColor.png" id="1_21b5y"]
+
 [resource]
+albedo_texture = ExtResource("1_21b5y")
+uv1_scale = Vector3(0.3, 1, 1)
+uv1_offset = Vector3(1, 1, 1)
+uv1_triplanar = true
+uv2_triplanar = true
