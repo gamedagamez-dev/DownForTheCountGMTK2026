@@ -8,7 +8,7 @@ extends CharacterBody3D
 @export var wall_jump_force = 6.0
 @export var coyote_time = 0.15
 @export var jump_buffer_time = 0.15
-@export var acceleration: float = 30.0
+@export var acceleration: float = 60.0
 @export var friction: float = 120.0
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0

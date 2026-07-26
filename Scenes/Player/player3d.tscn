@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://cedicqkipx0w4" path="res://Resources/outline.tres" id="3_x07ym"]
 [ext_resource type="AudioStream" uid="uid://4aelm4lkeoq0" path="res://Aris/countownromance.wav" id="5_x07ym"]
 [ext_resource type="AudioStream" uid="uid://b18df3u6r7w7y" path="res://Aris/NewFootsteps/JumpLanding.wav" id="6_7nnyn"]
+[ext_resource type="PackedScene" uid="uid://c3otx0t7orktq" path="res://Art/LeoArt/Player.fbx" id="7_1ddtc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rk0t1"]
 
@@ -25,6 +26,7 @@ script = ExtResource("1_meivf")
 shape = SubResource("CapsuleShape3D_rk0t1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1350648104]
+visible = false
 material_override = ExtResource("2_1uwsh")
 material_overlay = ExtResource("3_x07ym")
 mesh = SubResource("CapsuleMesh_rk0t1")
@@ -74,4 +76,15 @@ stream = ExtResource("6_7nnyn")
 volume_db = -4.0
 bus = &"sfx"
 
+[node name="Player" parent="." unique_id=677957626 instance=ExtResource("7_1ddtc")]
+transform = Transform3D(5.366196e-09, 0, -0.45, 0, 0.45, 0, 0.45, 0, 5.366196e-09, 0, 0, 0)
+
+[node name="Bob" parent="Player/metarig/Skeleton3D" parent_id_path=PackedInt32Array(677957626, 561519354) index="0" unique_id=1704027225]
+material_overlay = ExtResource("3_x07ym")
+
+[node name="body_001" parent="Player/metarig/Skeleton3D" parent_id_path=PackedInt32Array(677957626, 561519354) index="1" unique_id=769799153]
+material_overlay = ExtResource("3_x07ym")
+
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
+
+[editable path="Player"]
