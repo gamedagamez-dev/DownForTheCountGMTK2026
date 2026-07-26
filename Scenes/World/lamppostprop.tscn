@@ -15,6 +15,9 @@ texture_filter = 0
 albedo_texture = ExtResource("3_8cdcu")
 texture_filter = 0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6iq5h"]
+size = Vector3(1, 1.1430664, 1)
+
 [node name="Node3D" type="Node3D" unique_id=623167786]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1378853388]
@@ -30,5 +33,11 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 [node name="Cube" parent="lamppost" index="0" unique_id=401330385]
 surface_material_override/0 = SubResource("StandardMaterial3D_rcrqk")
 surface_material_override/1 = SubResource("StandardMaterial3D_iriyi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1311444298]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=858723959]
+transform = Transform3D(0.20242456, 0, 0, 0, 3.6848454, 0, 0, 0, 0.16391258, 0, -0.2635888, 0)
+shape = SubResource("BoxShape3D_6iq5h")
 
 [editable path="lamppost"]

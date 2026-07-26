@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bnql3q5t0n4ma" path="res://Resources/2dart/BlobGuyBillboard.png" id="4_oudrq"]
 [ext_resource type="Texture2D" uid="uid://bia5hspcg2e7v" path="res://Resources/2dart/SprintBillboard.png" id="6_10vwu"]
 [ext_resource type="Texture2D" uid="uid://de0mtiy63otk1" path="res://Resources/2dart/KissSpeedBillboard.png" id="7_61gt8"]
-[ext_resource type="PackedScene" uid="uid://ddwlsqx5driuo" path="res://Scenes/World/lamppostprop.tscn" id="9_pjd01"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
 
@@ -6854,18 +6853,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_10vwu")
 
 [node name="support" parent="Billboards/Node3D/billboard" index="3" unique_id=16168381]
 visible = false
-
-[node name="Node3D" parent="." unique_id=623167786 instance=ExtResource("9_pjd01")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -31.41739, 3.7174091, 13.3327)
-
-[node name="Node3D2" parent="." unique_id=22695900 instance=ExtResource("9_pjd01")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.762342, 3.7174091, 13.3327)
-
-[node name="Node3D3" parent="." unique_id=1765642168 instance=ExtResource("9_pjd01")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19.762342, 3.7174091, -15.215796)
-
-[node name="Node3D4" parent="." unique_id=1928792752 instance=ExtResource("9_pjd01")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -30.743532, 3.7174091, -15.215796)
 
 [editable path="Billboards/Node3D2"]
 [editable path="Billboards/Node3D2/billboard"]
