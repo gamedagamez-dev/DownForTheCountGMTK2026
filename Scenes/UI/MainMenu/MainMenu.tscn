@@ -80,7 +80,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1888976900]
 stream = ExtResource("3_ehq06")
-volume_db = -5.0
+volume_db = -10.0
 autoplay = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
