@@ -13,7 +13,8 @@ extends CharacterBody3D
 var coyote_timer = 0.0
 var jump_buffer_timer = 0.0
 var busy = false
-
+var footstep_time = 0.5
+var left_ground = 0
 # Mouse look settings
 @export var mouse_sensitivity: float = 0.003
 @export var min_pitch: float = -80.0 # Lowest look angle (degrees)
@@ -28,12 +29,21 @@ var busy = false
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var footstep1 = preload("res://Aris/NewFootsteps/Footstep1.wav")
+var footstep2 = preload("res://Aris/NewFootsteps/Footstep2.wav")
+var footstep3 = preload("res://Aris/NewFootsteps/footstep3.wav")
+var footstep4 = preload("res://Aris/NewFootsteps/footstep4.wav")
+var footstep5 = preload("res://Aris/NewFootsteps/footstep5.wav")
+var landing = preload("res://Aris/NewFootsteps/JumpLanding.wav")
+var footstep_list = []
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	toggle_pause()
 	# Hide the mouse cursor and lock it to the game window
 	$PlayerUi.updateVampKissed(vampires_kissed)
 	Global.current_score = vampires_kissed
+	footstep_list = [footstep1,footstep2,footstep3,footstep4,footstep5]
 
 func talking_to_baddie(StartOrStop):
 	get_node("PlayerUi/PauseMenu/AudioStreamPlayer").stream_paused = StartOrStop
@@ -104,12 +114,27 @@ func _physics_process(delta: float) -> void:
 	if direction and busy == false:
 		velocity.x = move_toward(velocity.x, direction.x * (speed + Global.current_score + (sprint_speed * int(sprinting))), acceleration * delta)
 		velocity.z = move_toward(velocity.z, direction.z * (speed + Global.current_score + (sprint_speed * int(sprinting))), acceleration * delta)
+		if sprinting == true and is_on_floor():
+			footstep_time -= delta * 2
+		elif  is_on_floor():
+			footstep_time -= delta
+		if footstep_time <= 0:
+			$FootstepAudio.stream = footstep_list[randi() % 5]
+			$FootstepAudio.play()
+			footstep_time = 0.5
 	elif is_on_floor() and busy == false:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
 		velocity.z = move_toward(velocity.z, 0, friction * delta)
 	# else: airborne with no input -> keep current horizontal velocity (no deceleration)
+	
+	if left_ground >= 0.75 and is_on_floor():
+		$LandingAudio.play()
+		left_ground = 0
 
 	move_and_slide()
+	
+	if is_on_floor() == false:
+		left_ground += delta
 
 func toggle_pause():
 	get_tree().paused = !get_tree().paused
