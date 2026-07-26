@@ -55,6 +55,7 @@ offset_left = -76.0
 offset_top = 18.0
 offset_right = 116.0
 offset_bottom = 34.0
+step = 0.5
 value = 50.0
 
 [node name="QuitContainer" type="Control" parent="." unique_id=2117172550]
@@ -88,5 +89,6 @@ offset_right = 77.0
 offset_bottom = 66.0
 text = "Quit to Main menu"
 
+[connection signal="drag_ended" from="SensContainer/HSlider" to="." method="_on_h_slider_drag_ended"]
 [connection signal="pressed" from="QuitContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="MainMenucontainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
