@@ -102,6 +102,8 @@ pixel_size = 0.0005
 billboard = 1
 texture = ExtResource("2_acfei")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=903342959]
+
 [connection signal="selected" from="." to="." method="_on_selected"]
 [connection signal="button_down" from="Control/answer_1" to="." method="_on_answer_1_button_down"]
 [connection signal="button_down" from="Control/answer_2" to="." method="_on_answer_2_button_down"]
