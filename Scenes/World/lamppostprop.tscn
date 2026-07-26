@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ddwlsqx5driuo"]
+
+[ext_resource type="PackedScene" uid="uid://c8yln3fqh7use" path="res://Art/LeoArt/lamppost.fbx" id="1_m14h8"]
+[ext_resource type="Texture2D" uid="uid://ju3mmtopa1r3" path="res://Resources/2dart/light_Base_color.png" id="2_8q1oq"]
+[ext_resource type="Texture2D" uid="uid://tfyxjb1dfglc" path="res://Resources/2dart/post_Base_color.png" id="3_8cdcu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcrqk"]
+albedo_texture = ExtResource("2_8q1oq")
+emission_enabled = true
+emission_energy_multiplier = 0.65
+emission_texture = ExtResource("2_8q1oq")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iriyi"]
+albedo_texture = ExtResource("3_8cdcu")
+texture_filter = 0
+
+[node name="Node3D" type="Node3D" unique_id=623167786]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1378853388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5022972, 1.7577827, 0)
+light_color = Color(0, 0.73333335, 1, 1)
+light_energy = 11.196
+light_indirect_energy = 1.2
+light_size = 1.0
+
+[node name="lamppost" parent="." unique_id=2143913159 instance=ExtResource("1_m14h8")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Cube" parent="lamppost" index="0" unique_id=401330385]
+surface_material_override/0 = SubResource("StandardMaterial3D_rcrqk")
+surface_material_override/1 = SubResource("StandardMaterial3D_iriyi")
+
+[editable path="lamppost"]
