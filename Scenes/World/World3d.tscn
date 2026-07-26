@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://doywl67e42nyf" path="res://Scenes/World/npc.tscn" id="1_noce4"]
 [ext_resource type="PackedScene" uid="uid://dc0oy2ji0chod" path="res://Scenes/Player/player3d.tscn" id="1_oywug"]
 [ext_resource type="PackedScene" uid="uid://b5shois705jdx" path="res://Art/LeoArt/CarSadan.fbx" id="2_4vpf2"]
+[ext_resource type="Material" uid="uid://8bum3jr2qiof" path="res://Art/LeoArt/new_standard_material_3d.tres" id="2_pjd01"]
 [ext_resource type="PackedScene" uid="uid://biaxkqq5sxa1a" path="res://Art/LeoArt/Truck.fbx" id="3_10vwu"]
 [ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
 [ext_resource type="Texture2D" uid="uid://bnql3q5t0n4ma" path="res://Resources/2dart/BlobGuyBillboard.png" id="4_oudrq"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://de0mtiy63otk1" path="res://Resources/2dart/KissSpeedBillboard.png" id="7_61gt8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
+material = ExtResource("2_pjd01")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_quq03"]
 albedo_color = Color(0.43432283, 0.43432283, 0.43432283, 1)
@@ -6786,6 +6788,7 @@ transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -6
 [node name="billboard" parent="Billboards/Node3D2" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
+<<<<<<< Updated upstream
 [node name="antenna" parent="Billboards/Node3D2/billboard" index="0" unique_id=766873235]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 
@@ -6796,6 +6799,18 @@ transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
 
 [node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=1902769071]
+=======
+[node name="antenna" parent="Billboards/Node3D2/billboard" index="0" unique_id=1133963727]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="edge" parent="Billboards/Node3D2/billboard" index="1" unique_id=1008181452]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D2/billboard" index="2" unique_id=2140189999]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+
+[node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=1911199919]
+>>>>>>> Stashed changes
 visible = false
 
 [node name="Node3D4" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
@@ -6804,6 +6819,7 @@ transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96
 [node name="billboard" parent="Billboards/Node3D4" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
 
+<<<<<<< Updated upstream
 [node name="antenna" parent="Billboards/Node3D4/billboard" index="0" unique_id=766873235]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
@@ -6816,6 +6832,20 @@ transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
 
 [node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=1902769071]
+=======
+[node name="antenna" parent="Billboards/Node3D4/billboard" index="0" unique_id=1133963727]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+visible = false
+
+[node name="edge" parent="Billboards/Node3D4/billboard" index="1" unique_id=1008181452]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D4/billboard" index="2" unique_id=2140189999]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_s0p3a")
+
+[node name="support" parent="Billboards/Node3D4/billboard" index="3" unique_id=1911199919]
+>>>>>>> Stashed changes
 visible = false
 
 [node name="Node3D5" parent="Billboards" unique_id=552441896 instance=ExtResource("3_quq03")]
@@ -6824,6 +6854,7 @@ transform = Transform3D(2.2351742e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 2
 [node name="billboard" parent="Billboards/Node3D5" index="0" unique_id=1697181069]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -14.140097, 0, 7.6293945e-06)
 
+<<<<<<< Updated upstream
 [node name="antenna" parent="Billboards/Node3D5/billboard" index="0" unique_id=766873235]
 transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
 visible = false
@@ -6836,6 +6867,20 @@ transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 surface_material_override/0 = SubResource("StandardMaterial3D_mnr7a")
 
 [node name="support" parent="Billboards/Node3D5/billboard" index="3" unique_id=1902769071]
+=======
+[node name="antenna" parent="Billboards/Node3D5/billboard" index="0" unique_id=1133963727]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+visible = false
+
+[node name="edge" parent="Billboards/Node3D5/billboard" index="1" unique_id=1008181452]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D5/billboard" index="2" unique_id=2140189999]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_mnr7a")
+
+[node name="support" parent="Billboards/Node3D5/billboard" index="3" unique_id=1911199919]
+>>>>>>> Stashed changes
 visible = false
 
 [node name="Node3D" parent="Billboards" unique_id=1539121699 instance=ExtResource("3_quq03")]
@@ -6844,6 +6889,7 @@ transform = Transform3D(-1.0739888e-07, 0, -1.387, 0, 2, 0, 2.457, 0, -6.062769e
 [node name="billboard" parent="Billboards/Node3D" index="0" unique_id=1697181069]
 transform = Transform3D(0.8, 0, -1.0658141e-14, 0, 0.8, 0, 0, 0, 0.8, 3.2836885, 0.7195492, 0.08191681)
 
+<<<<<<< Updated upstream
 [node name="antenna" parent="Billboards/Node3D/billboard" index="0" unique_id=766873235]
 visible = false
 
@@ -6852,6 +6898,16 @@ transform = Transform3D(100, 1.8189894e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -
 surface_material_override/0 = SubResource("StandardMaterial3D_10vwu")
 
 [node name="support" parent="Billboards/Node3D/billboard" index="3" unique_id=1902769071]
+=======
+[node name="antenna" parent="Billboards/Node3D/billboard" index="0" unique_id=1133963727]
+visible = false
+
+[node name="poster" parent="Billboards/Node3D/billboard" index="2" unique_id=2140189999]
+transform = Transform3D(100, 1.8189894e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.29088974, 0.018089294, -0.089035034)
+surface_material_override/0 = SubResource("StandardMaterial3D_10vwu")
+
+[node name="support" parent="Billboards/Node3D/billboard" index="3" unique_id=1911199919]
+>>>>>>> Stashed changes
 visible = false
 
 [editable path="Billboards/Node3D2"]
