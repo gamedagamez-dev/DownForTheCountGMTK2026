@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvjuagh2e3roh" path="res://Scenes/World/billboardprop.tscn" id="3_quq03"]
 [ext_resource type="Texture2D" uid="uid://bnql3q5t0n4ma" path="res://Resources/2dart/BlobGuyBillboard.png" id="4_oudrq"]
 [ext_resource type="Texture2D" uid="uid://bia5hspcg2e7v" path="res://Resources/2dart/SprintBillboard.png" id="6_10vwu"]
+[ext_resource type="Texture2D" uid="uid://82idsyu6jnfe" path="res://Resources/2dart/CoffinBillboard.png" id="6_pjd01"]
 [ext_resource type="Texture2D" uid="uid://de0mtiy63otk1" path="res://Resources/2dart/KissSpeedBillboard.png" id="7_61gt8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7tdgh"]
@@ -67,6 +68,11 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_665xo"]
 albedo_color = Color(0.99999994, 0.12643304, 0.81956214, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxpmg"]
+albedo_texture = ExtResource("6_pjd01")
+emission_enabled = true
+emission_texture = ExtResource("6_pjd01")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0p3a"]
 albedo_texture = ExtResource("6_10vwu")
@@ -994,6 +1000,30 @@ transform = Transform3D(0.9999939, -0.0034906515, 0, 0.0034905665, 0.99996954, -
 [node name="CarSadan99" parent="cars" unique_id=174520403 instance=ExtResource("2_4vpf2")]
 transform = Transform3D(-0.9999939, 0.0034906508, -8.742063e-08, 0.0034905665, 0.99996954, -0.0069812587, -2.4281724e-05, -0.0069812182, -0.99997544, 28.741566, 0.7755996, -148.7248)
 
+[node name="CarSadan100" parent="cars" unique_id=494667848 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9999939, 0.0034906508, -8.742063e-08, 0.0034905665, 0.99996954, -0.0069812587, -2.4281724e-05, -0.0069812182, -0.99997544, 28.741566, 0.7755996, -135.39075)
+
+[node name="CarSadan102" parent="cars" unique_id=311183976 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9999939, 0.0034906508, -8.742063e-08, 0.0034905665, 0.99996954, -0.0069812587, -2.4281724e-05, -0.0069812182, -0.99997544, 28.741566, 0.7755996, -109.15121)
+
+[node name="CarSadan103" parent="cars" unique_id=481147358 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.9999939, -0.0034906515, 0, 0.0034905665, 0.99996954, -0.0069812587, 2.4369147e-05, 0.006981218, 0.99997544, 28.741566, 0.7755996, -103.373665)
+
+[node name="CarSadan105" parent="cars" unique_id=189845687 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.9999939, -0.0034906515, 0, 0.0034905665, 0.99996954, -0.0069812587, 2.4369147e-05, 0.006981218, 0.99997544, 28.741566, 0.7755996, -90.631744)
+
+[node name="CarSadan106" parent="cars" unique_id=383659949 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.9999939, -0.0034906515, 0, 0.0034905665, 0.99996954, -0.0069812587, 2.4369147e-05, 0.006981218, 0.99997544, 28.741566, 0.7755996, -77.54494)
+
+[node name="CarSadan107" parent="cars" unique_id=296659453 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99689704, -0.0040286873, -0.07861463, 0.0034905665, 0.99996954, -0.0069812583, 0.07864037, 0.0066851866, 0.9968804, 28.741566, 0.7755996, -71.24726)
+
+[node name="CarSadan104" parent="cars" unique_id=249820240 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(0.99767673, -0.0039573875, -0.068012126, 0.0034905665, 0.99996954, -0.0069812583, 0.06803769, 0.006727639, 0.99765986, 28.741566, 0.7755996, -97.19539)
+
+[node name="CarSadan101" parent="cars" unique_id=1685544362 instance=ExtResource("2_4vpf2")]
+transform = Transform3D(-0.9964037, 0.004069008, 0.08463674, 0.0034905665, 0.99996954, -0.0069812583, -0.08466258, -0.006660722, -0.9963872, 28.741566, 0.7755996, -129.18367)
+
 [node name="CarSadan95" parent="cars" unique_id=107910565 instance=ExtResource("2_4vpf2")]
 transform = Transform3D(-0.9999939, 0.0034906508, -8.742063e-08, 0.0034905665, 0.99996954, -0.0069812587, -2.4281724e-05, -0.0069812182, -0.99997544, 45.930862, 0.7755996, -103.61703)
 
@@ -1197,6 +1227,21 @@ transform = Transform3D(-0.9999997, 0, -8.742275e-08, 0, 1, 0, 8.742275e-08, 0, 
 
 [node name="Truck52" parent="cars" unique_id=909799717 instance=ExtResource("3_10vwu")]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 45.782425, 0.88168365, -141.72043)
+
+[node name="Truck53" parent="cars" unique_id=1416065093 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 28.647858, 0.88168365, -142.34865)
+
+[node name="Truck54" parent="cars" unique_id=990391653 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.99943334, 0, -0.033649907, 0, 1, 0, 0.033649907, 0, 0.99943334, 28.647858, 0.88168365, -122.632706)
+
+[node name="Truck55" parent="cars" unique_id=399746757 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.99999964, 0, -8.742275e-08, 0, 1, 0, 8.742275e-08, 0, -0.99999964, 28.647858, 0.88168365, -116.022964)
+
+[node name="Truck56" parent="cars" unique_id=2003240188 instance=ExtResource("3_10vwu")]
+transform = Transform3D(-0.9991201, 0, -0.041931674, 0, 1, 0, 0.041931674, 0, -0.9991201, 28.647858, 0.88168365, -83.723465)
+
+[node name="Truck57" parent="cars" unique_id=595718719 instance=ExtResource("3_10vwu")]
+transform = Transform3D(0.99999964, 0, 0, 0, 1, 0, 0, 0, 0.99999964, 28.647858, 0.88168365, -64.06306)
 
 [node name="Truck31" parent="cars" unique_id=1724877670 instance=ExtResource("3_10vwu")]
 transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, -36.977097, 0.88168365, 87.5809)
@@ -6798,7 +6843,26 @@ transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -9
 [node name="support" parent="Billboards/Node3D2/billboard" index="3" unique_id=16168381]
 visible = false
 
-[node name="Node3D4" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
+[node name="Node3D6" parent="Billboards" unique_id=107295564 instance=ExtResource("3_quq03")]
+transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -60.2279, 21.120998, 26.57371)
+
+[node name="billboard" parent="Billboards/Node3D6" index="0" unique_id=1697181069]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -15.740097, 0, 7.6293945e-06)
+
+[node name="antenna" parent="Billboards/Node3D6/billboard" index="0" unique_id=509826140]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="edge" parent="Billboards/Node3D6/billboard" index="1" unique_id=1434340184]
+transform = Transform3D(100, 3.637979e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.4340744, -11.198647, 0)
+
+[node name="poster" parent="Billboards/Node3D6/billboard" index="2" unique_id=1525483574]
+transform = Transform3D(100, 5.456968e-12, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 6.443571, -11.238514, 0.013053894)
+surface_material_override/0 = SubResource("StandardMaterial3D_dxpmg")
+
+[node name="support" parent="Billboards/Node3D6/billboard" index="3" unique_id=16168381]
+visible = false
+
+[node name="Node3D4" parent="Billboards" unique_id=1717853378 instance=ExtResource("3_quq03")]
 transform = Transform3D(0.96592575, 0, 0.25881925, 0, 1, 0, -0.25881925, 0, 0.96592575, -10.790632, 12.457905, -52.70735)
 
 [node name="billboard" parent="Billboards/Node3D4" index="0" unique_id=1697181069]
@@ -6856,6 +6920,8 @@ visible = false
 
 [editable path="Billboards/Node3D2"]
 [editable path="Billboards/Node3D2/billboard"]
+[editable path="Billboards/Node3D6"]
+[editable path="Billboards/Node3D6/billboard"]
 [editable path="Billboards/Node3D4"]
 [editable path="Billboards/Node3D4/billboard"]
 [editable path="Billboards/Node3D5"]
