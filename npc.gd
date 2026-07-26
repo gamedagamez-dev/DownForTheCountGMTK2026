@@ -148,6 +148,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 				$Sprite3D.visible = false
 				is_talk = true
 				area.get_parent().look_at(Vector3(position.x,area.global_position.y,position.z))
+				area.get_parent().get_node("FPcamera").current = true
 				area.get_parent().busy = true
 				dialogue_start()
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -156,6 +157,7 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 					await get_tree().create_timer(1.0/240).timeout
 				Global.timer_running = true
 				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+				area.get_parent().get_node("FPcamera").current = false
 				is_talk = false
 				if outcome == 1 and not already_smooched:
 					area.get_parent().vampires_kissed += 1
