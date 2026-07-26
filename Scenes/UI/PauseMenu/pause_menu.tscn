@@ -141,7 +141,6 @@ text = "Quit to Main menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2120956092]
 stream = ExtResource("2_2ts85")
-autoplay = true
 bus = &"music"
 
 [connection signal="drag_ended" from="SensContainer/HSlider" to="." method="_on_h_slider_drag_ended"]
